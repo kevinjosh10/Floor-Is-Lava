@@ -11,7 +11,7 @@ export class Input {
   
   private isTracking: boolean = false;
 
-  public attach(canvas: HTMLCanvasElement) {
+  public attach(_canvas: HTMLCanvasElement) {
     this.isTracking = true;
     window.addEventListener('mousemove', this.handleMouseMove);
   }
