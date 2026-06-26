@@ -65,7 +65,7 @@ export class GameplayScene extends Scene {
     
     // Manage platforms
     for (const p of this.platforms) {
-      p.update(time);
+      p.update(time, this.width, this.height);
     }
     
     // Filter destroyed platforms and spawn new ones
@@ -88,19 +88,20 @@ export class GameplayScene extends Scene {
       }
     }
 
-    // Check lava death if not on a safe platform
-    if (!isSafe && this.lava.contains(input.x, input.y)) {
+    // Jump / Air Time Mechanic: If moving fast, you are safe (jumping).
+    // If you stop or move too slowly off a platform, you die.
+    const isJumping = input.speed > 800; // pixels per second
+
+    if (!isSafe && !isJumping && this.lava.contains(input.x, input.y)) {
       if (cursor.state !== 'dead') {
         cursor.state = 'dead';
         this.die(input);
       }
     } else {
-      // Not in lava, but off platform
-      if (!isSafe) {
-        cursor.state = 'danger';
-        // Near death detection could be here
+      if (!isSafe && isJumping) {
+        cursor.state = 'warning'; // jumping over lava
       } else {
-        cursor.state = 'safe';
+        cursor.state = 'safe'; // on platform
       }
     }
   }

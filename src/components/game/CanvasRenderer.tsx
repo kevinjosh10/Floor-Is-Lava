@@ -12,10 +12,16 @@ export const CanvasRenderer: React.FC = () => {
   useEffect(() => {
     if (!canvasRef.current) return;
     
-    // Resize canvas to window size
+    // Resize canvas to window size with High DPI scaling
     const resizeCanvas = () => {
-      canvasRef.current!.width = window.innerWidth;
-      canvasRef.current!.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvasRef.current!.width = window.innerWidth * dpr;
+      canvasRef.current!.height = window.innerHeight * dpr;
+      canvasRef.current!.style.width = `${window.innerWidth}px`;
+      canvasRef.current!.style.height = `${window.innerHeight}px`;
+      
+      const ctx = canvasRef.current!.getContext('2d');
+      if (ctx) ctx.scale(dpr, dpr);
     };
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();

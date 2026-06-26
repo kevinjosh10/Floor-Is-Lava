@@ -7,7 +7,7 @@ const MenuButton = ({ icon: Icon, label, onClick, delay }: { icon: any, label: s
   <motion.button
     initial={{ opacity: 0, x: -50 }}
     animate={{ opacity: 1, x: 0 }}
-    transition={{ delay, type: "spring", stiffness: 100 }}
+    transition={{ delay, type: "spring", stiffness: 200, damping: 15 }}
     whileHover={{ scale: 1.05, x: 10 }}
     whileTap={{ scale: 0.95 }}
     onClick={onClick}

@@ -75,7 +75,8 @@ export class GameLoop {
   }
 
   private render() {
-    const { width, height } = this.canvas;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     
     // Clear background
     this.ctx.fillStyle = '#121212'; // charcoal-900

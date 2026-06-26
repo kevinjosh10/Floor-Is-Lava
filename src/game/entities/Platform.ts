@@ -16,9 +16,26 @@ export class Platform {
     this.radius = radius;
   }
 
-  public update(time: Time) {
+  public update(time: Time, width: number, height: number) {
     this.x += this.vx * time.deltaTime;
     this.y += this.vy * time.deltaTime;
+
+    // Bounce off walls
+    if (this.x - this.radius < 0) {
+      this.x = this.radius;
+      this.vx *= -1;
+    } else if (this.x + this.radius > width) {
+      this.x = width - this.radius;
+      this.vx *= -1;
+    }
+
+    if (this.y - this.radius < 0) {
+      this.y = this.radius;
+      this.vy *= -1;
+    } else if (this.y + this.radius > height) {
+      this.y = height - this.radius;
+      this.vy *= -1;
+    }
     
     if (this.state === 'breaking') {
       this.life -= time.deltaTime * 50;

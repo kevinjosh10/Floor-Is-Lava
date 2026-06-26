@@ -1,65 +1,38 @@
 import { Time } from '../engine/Time';
 
 export class Lava {
-  public coverage: number = 0; // 0 to 1
-  public speed: number = 0.05; // growth per second
-  private yPosition: number;
-  private height: number;
+  private pulse: number = 0;
 
-  constructor(canvasHeight: number) {
-    this.height = canvasHeight;
-    this.yPosition = canvasHeight; // starts offscreen at bottom
+  constructor(_canvasHeight: number) {
+    // Canvas height not strictly needed for this effect anymore
   }
 
   public update(time: Time) {
-    // Lava slowly rises (coverage increases)
-    this.coverage += this.speed * time.deltaTime * time.difficultyMultiplier;
-    if (this.coverage > 1) this.coverage = 1;
-    
-    // Convert coverage to y position
-    this.yPosition = this.height * (1 - this.coverage);
+    this.pulse += time.deltaTime;
   }
 
   public render(ctx: CanvasRenderingContext2D, width: number, height: number, time: Time) {
-    if (this.coverage <= 0) return;
+    const pulseFactor = Math.sin(time.elapsedTime * 2) * 0.1 + 0.9; // 0.8 to 1.0
 
-    // Draw base lava
-    ctx.fillStyle = '#ff2a00';
-    ctx.fillRect(0, this.yPosition, width, height - this.yPosition);
+    const gradient = ctx.createRadialGradient(
+      width / 2, height / 2, 0,
+      width / 2, height / 2, Math.max(width, height) * pulseFactor
+    );
     
-    // Draw animated wave effect at the edge
-    ctx.beginPath();
-    ctx.moveTo(0, this.yPosition);
-    for (let x = 0; x <= width; x += 20) {
-      const wave = Math.sin((x + time.elapsedTime * 100) * 0.05) * 10;
-      ctx.lineTo(x, this.yPosition + wave);
-    }
-    ctx.lineTo(width, height);
-    ctx.lineTo(0, height);
-    ctx.closePath();
-    
-    // Gradient for the wave top
-    const gradient = ctx.createLinearGradient(0, this.yPosition - 20, 0, this.yPosition + 20);
-    gradient.addColorStop(0, 'rgba(255, 204, 0, 0)'); // yellow glow
-    gradient.addColorStop(0.5, '#ff6600'); // orange
-    gradient.addColorStop(1, '#ff2a00'); // red
-    
+    gradient.addColorStop(0, '#ff4d00'); // bright center
+    gradient.addColorStop(0.5, '#cc2900');
+    gradient.addColorStop(1, '#800000'); // dark edges
+
     ctx.fillStyle = gradient;
-    ctx.fill();
+    ctx.fillRect(0, 0, width, height);
 
-    // Heat glow effect
-    ctx.shadowBlur = 30;
-    ctx.shadowColor = '#ff2a00';
-    ctx.strokeStyle = '#ffcc00';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    
-    // Reset shadow
-    ctx.shadowBlur = 0;
+    // Subtle global heat distortion effect
+    ctx.fillStyle = `rgba(255, 150, 0, ${Math.sin(time.elapsedTime * 5) * 0.02 + 0.03})`;
+    ctx.fillRect(0, 0, width, height);
   }
   
-  // Check if a point is in lava
-  public contains(_x: number, y: number): boolean {
-    return y > this.yPosition;
+  // Since lava is everywhere, this always returns true
+  public contains(_x: number, _y: number): boolean {
+    return true;
   }
 }
