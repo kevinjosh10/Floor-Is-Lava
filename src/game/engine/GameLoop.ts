@@ -1,6 +1,7 @@
 import { Time } from './Time';
 import { Input } from './Input';
 import { Cursor } from '../entities/Cursor';
+import { Scene } from './Scene';
 
 export class GameLoop {
   private requestRef: number = 0;
@@ -11,6 +12,7 @@ export class GameLoop {
   public cursor: Cursor;
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
+  private currentScene: Scene | null = null;
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -21,6 +23,14 @@ export class GameLoop {
     this.time = new Time();
     this.input = new Input();
     this.cursor = new Cursor();
+  }
+
+  public setScene(scene: Scene) {
+    if (this.currentScene) {
+      this.currentScene.destroy();
+    }
+    this.currentScene = scene;
+    this.currentScene.init();
   }
 
   public start() {
@@ -37,6 +47,9 @@ export class GameLoop {
     this.running = false;
     this.input.detach();
     cancelAnimationFrame(this.requestRef);
+    if (this.currentScene) {
+      this.currentScene.destroy();
+    }
   }
 
   private loop = (currentTime: number) => {
@@ -48,8 +61,11 @@ export class GameLoop {
     // 2. Update Input
     this.input.update(this.time.deltaTime);
 
-    // 3. Update Entities
+    // 3. Update Entities & Scene
     this.cursor.update(this.input, this.time);
+    if (this.currentScene) {
+      this.currentScene.update(this.time, this.input, this.cursor);
+    }
 
     // 4. Render
     this.render();
@@ -65,7 +81,12 @@ export class GameLoop {
     this.ctx.fillStyle = '#121212'; // charcoal-900
     this.ctx.fillRect(0, 0, width, height);
 
-    // Render Entities
+    // Render Scene
+    if (this.currentScene) {
+      this.currentScene.render(this.ctx, this.input, this.time);
+    }
+
+    // Render Cursor on top
     this.cursor.render(this.ctx, this.input);
   }
 }
