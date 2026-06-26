@@ -2,6 +2,7 @@ import React from 'react';
 import { useAppStore } from './store/useAppStore';
 import { SplashScreen } from './components/screens/SplashScreen';
 import { MainMenu } from './components/screens/MainMenu';
+import { SettingsMenu } from './components/screens/SettingsMenu';
 
 const App: React.FC = () => {
   const appState = useAppStore((state) => state.appState);
@@ -21,11 +22,7 @@ const App: React.FC = () => {
           GET READY
         </div>
       )}
-      {appState === 'settings' && (
-        <div className="w-full h-screen flex items-center justify-center bg-charcoal-900">
-          Settings Screen placeholder
-        </div>
-      )}
+      {appState === 'settings' && <SettingsMenu />}
       {appState === 'achievements' && (
         <div className="w-full h-screen flex items-center justify-center bg-charcoal-900">
           Achievements placeholder
