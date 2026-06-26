@@ -25,6 +25,22 @@ export const CanvasRenderer: React.FC = () => {
     loop.setScene(scene);
     loop.start();
 
+    // Store loop in a ref to control it from outside if needed
+    // Or just use a subscribe to appState
+    const unsubscribe = useAppStore.subscribe((state, prevState) => {
+      if (state.appState === 'countdown') {
+        loop.time.isPaused = true;
+        // Reset scene if coming from gameover or elsewhere
+        if (prevState.appState !== 'countdown') {
+          const newScene = new GameplayScene(window.innerWidth, window.innerHeight);
+          loop.setScene(newScene);
+          loop.cursor.reset();
+        }
+      } else if (state.appState === 'playing') {
+        loop.time.isPaused = false;
+      }
+    });
+
     // Listen to Game Over event
     const handleGameOver = (score: number) => {
       setHighScore(score);
@@ -41,6 +57,7 @@ export const CanvasRenderer: React.FC = () => {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       GameEvents.off(EventTypes.GameOver, handleGameOver);
+      unsubscribe();
       loop.stop();
     };
   }, [setAppState, setHighScore]);

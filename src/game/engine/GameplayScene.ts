@@ -46,8 +46,18 @@ export class GameplayScene extends Scene {
     this.platforms.push(platform);
   }
 
+  private firstFrame = true;
+
   public update(time: Time, input: Input, cursor: Cursor): void {
     if (time.isPaused) return;
+
+    if (this.firstFrame) {
+      // Spawn a platform directly under the player's initial cursor position
+      // so they don't instantly die on the first frame
+      const startPlatform = new Platform(input.x || this.width/2, input.y || this.height/2, 60);
+      this.platforms.push(startPlatform);
+      this.firstFrame = false;
+    }
 
     this.director.update(time);
     this.lava.update(time);

@@ -11,6 +11,8 @@ export class Cursor {
   private trail: { x: number, y: number, age: number }[] = [];
 
   public update(input: Input, time: Time) {
+    if (this.state === 'dead') return;
+
     // Add current position to trail
     this.trail.unshift({ x: input.x, y: input.y, age: 0 });
     
@@ -20,6 +22,11 @@ export class Cursor {
       ...p,
       age: p.age + time.deltaTime
     }));
+  }
+
+  public reset() {
+    this.state = 'safe';
+    this.trail = [];
   }
 
   public render(ctx: CanvasRenderingContext2D, input: Input) {

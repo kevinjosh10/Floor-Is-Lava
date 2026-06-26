@@ -21,8 +21,9 @@ const App: React.FC = () => {
   }, [appState, setAppState]);
 
   return (
-    <div className="w-full h-screen bg-charcoal-900 overflow-hidden text-white cursor-none">
-      
+    <div className={`w-full h-screen bg-charcoal-900 overflow-hidden text-white ${
+      (appState === 'playing' || appState === 'countdown') ? 'cursor-none' : ''
+    }`}>
       {/* Canvas is always mounted in the background, but only active during 'playing' or 'gameover' */}
       {(appState === 'playing' || appState === 'gameover' || appState === 'countdown') && (
         <CanvasRenderer />

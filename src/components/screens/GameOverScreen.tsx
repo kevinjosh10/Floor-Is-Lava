@@ -26,7 +26,7 @@ export const GameOverScreen: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0,255,102,0.4)" }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setAppState('playing')}
+            onClick={() => setAppState('countdown')}
             className="flex items-center space-x-3 px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all"
           >
             <RefreshCw className="w-6 h-6 text-[#00ff66]" />
