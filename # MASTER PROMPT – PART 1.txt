@@ -1,0 +1,9052 @@
+# MASTER PROMPT – PART 1
+# Project: THE FLOOR IS LAVA
+# Version: 1.0
+# Purpose:
+Build a world-class browser game called "The Floor Is Lava" that runs entirely inside the browser with no backend, no API keys, no paid services, and is deployed automatically to GitHub Pages using GitHub Actions. The game must feel polished, highly optimized, visually impressive, and addictive while remaining easy to understand.
+
+================================================================================
+OVERALL OBJECTIVE
+================================================================================
+
+You are an elite senior software engineer, senior game developer, senior UI/UX designer, technical architect, graphics programmer, frontend engineer, DevOps engineer, QA engineer, accessibility engineer, performance engineer, and technical writer.
+
+Your responsibility is to design and build the complete game from start to finish with production-quality code.
+
+Never generate placeholder code unless explicitly required.
+
+Every feature should be production ready.
+
+Everything should feel smooth.
+
+Everything should be animated.
+
+Everything should be optimized.
+
+Everything should be responsive.
+
+Everything should be maintainable.
+
+================================================================================
+CORE IDEA
+================================================================================
+
+The browser window itself is the game world.
+
+The player's mouse cursor is the character.
+
+The floor slowly becomes lava.
+
+Safe platforms move around.
+
+The objective is simple:
+
+Stay alive.
+
+Every second gets harder.
+
+The player should constantly think:
+
+"One more run."
+
+The game should feel similar to modern indie arcade games.
+
+Easy to learn.
+
+Very difficult to master.
+
+================================================================================
+GAMEPLAY PHILOSOPHY
+================================================================================
+
+The game must satisfy these principles:
+
+• No loading screens
+• Instant gameplay
+• One-click restart
+• Highly satisfying movement
+• Extremely polished visuals
+• Addictive gameplay loop
+• Smooth animations
+• Excellent sound feedback
+• Randomness without unfairness
+• Difficulty should increase naturally
+• Every game should feel different
+
+The player should lose because they made a mistake.
+
+Never because the game cheated.
+
+================================================================================
+TARGET FRAME RATE
+================================================================================
+
+Desktop:
+144 FPS capable
+
+Minimum:
+60 FPS
+
+Frame pacing must remain smooth.
+
+Avoid frame drops.
+
+Use requestAnimationFrame.
+
+Never use inefficient rendering techniques.
+
+================================================================================
+TECH STACK
+================================================================================
+
+Framework:
+React + Vite
+
+Language:
+TypeScript
+
+Package Manager:
+pnpm (preferred)
+
+Styling:
+Tailwind CSS
+
+Animations:
+Framer Motion
+
+Rendering:
+HTML5 Canvas
+
+Particles:
+Canvas based
+
+Icons:
+Lucide React
+
+State:
+Zustand
+
+Routing:
+React Router
+
+Audio:
+Howler.js
+
+Persistence:
+Local Storage
+
+Deployment:
+GitHub Pages
+
+CI/CD:
+GitHub Actions
+
+Linting:
+ESLint
+
+Formatting:
+Prettier
+
+Git Hooks:
+Husky
+
+Testing:
+Vitest
+
+Build Tool:
+Vite
+
+================================================================================
+NO BACKEND
+================================================================================
+
+Do NOT build a backend.
+
+Everything must work offline.
+
+Everything must be local.
+
+No Firebase.
+
+No Supabase.
+
+No APIs.
+
+No authentication.
+
+No login.
+
+No accounts.
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+Create an organized architecture.
+
+Example:
+
+src/
+
+components/
+
+game/
+
+canvas/
+
+hooks/
+
+store/
+
+utils/
+
+constants/
+
+types/
+
+assets/
+
+audio/
+
+images/
+
+fonts/
+
+effects/
+
+particles/
+
+entities/
+
+platforms/
+
+lava/
+
+powerups/
+
+bosses/
+
+events/
+
+systems/
+
+collision/
+
+physics/
+
+renderer/
+
+ui/
+
+menus/
+
+screens/
+
+settings/
+
+achievements/
+
+statistics/
+
+shop/
+
+themes/
+
+styles/
+
+Every folder must have a clear purpose.
+
+================================================================================
+DESIGN STYLE
+================================================================================
+
+The game should look like a premium indie Steam game.
+
+Inspirations:
+
+• Super Hexagon
+• Vampire Survivors
+• Brotato
+• Geometry Dash
+• Hades UI
+• Dead Cells UI
+• Celeste menus
+
+The interface should feel alive.
+
+================================================================================
+COLOR PALETTE
+================================================================================
+
+Background:
+Dark charcoal
+
+Lava:
+Orange
+Yellow
+Red
+White glow
+
+Safe platforms:
+Green
+Blue
+Cyan
+
+UI:
+Glassmorphism
+
+Buttons:
+Rounded
+
+Soft shadows
+
+Animated gradients
+
+================================================================================
+TYPOGRAPHY
+================================================================================
+
+Modern geometric font.
+
+Bold titles.
+
+Readable UI.
+
+No default browser fonts.
+
+================================================================================
+MENU SYSTEM
+================================================================================
+
+Create a beautiful animated menu.
+
+Buttons:
+
+Play
+
+Statistics
+
+Achievements
+
+Settings
+
+Themes
+
+Credits
+
+Exit Game
+
+Every button must animate.
+
+Hover effects.
+
+Glow effects.
+
+Sound effects.
+
+================================================================================
+GAME FLOW
+================================================================================
+
+Open website
+
+↓
+
+Animated splash screen
+
+↓
+
+Logo animation
+
+↓
+
+Main menu
+
+↓
+
+Play
+
+↓
+
+Countdown
+
+3
+
+2
+
+1
+
+GO
+
+↓
+
+Gameplay
+
+↓
+
+Death animation
+
+↓
+
+Results
+
+↓
+
+Play Again
+
+================================================================================
+SPLASH SCREEN
+================================================================================
+
+Display animated lava.
+
+Animated logo.
+
+Heat distortion.
+
+Smoke particles.
+
+Play button fades in.
+
+================================================================================
+MAIN MENU
+================================================================================
+
+Animated background.
+
+Moving lava.
+
+Floating embers.
+
+Mouse parallax.
+
+Dynamic lighting.
+
+Background music.
+
+================================================================================
+USER EXPERIENCE
+================================================================================
+
+No dead screens.
+
+Everything animated.
+
+Everything responds instantly.
+
+Buttons bounce slightly.
+
+Hover creates glow.
+
+Clicks feel satisfying.
+
+================================================================================
+CURSOR
+================================================================================
+
+The cursor is the player.
+
+Hide default cursor.
+
+Render custom cursor.
+
+Cursor should have:
+
+Glow
+
+Particles
+
+Trail
+
+Rotation
+
+Breathing animation
+
+Near lava:
+
+Starts shaking.
+
+Gets red.
+
+Heartbeat increases.
+
+================================================================================
+AUDIO
+================================================================================
+
+Every action needs feedback.
+
+Hover
+
+Click
+
+Countdown
+
+Powerups
+
+Near death
+
+Platform break
+
+Explosion
+
+Game over
+
+Victory
+
+Boss
+
+================================================================================
+PERFORMANCE RULES
+================================================================================
+
+Only update visible particles.
+
+Reuse objects.
+
+Avoid allocations.
+
+Pool particles.
+
+Throttle expensive calculations.
+
+Avoid unnecessary React re-renders.
+
+Canvas handles gameplay.
+
+React handles UI.
+
+================================================================================
+RESPONSIVE DESIGN
+================================================================================
+
+Desktop first.
+
+Support:
+
+1920x1080
+
+2560x1440
+
+3440 ultrawide
+
+Laptop
+
+Tablet
+
+For mobile devices, display a friendly message that the game is currently optimized for desktop mouse controls, rather than attempting a poor touch experience.
+
+================================================================================
+ACCESSIBILITY
+================================================================================
+
+Colorblind friendly palettes.
+
+Reduced motion option.
+
+Master volume.
+
+Mute.
+
+UI scale.
+
+Pause game.
+
+================================================================================
+SETTINGS
+================================================================================
+
+Graphics
+
+Particles
+
+Volume
+
+Music
+
+Screen Shake
+
+Cursor Trail
+
+FPS Counter
+
+Difficulty
+
+VSync
+
+Language-ready architecture
+
+================================================================================
+SAVE SYSTEM
+================================================================================
+
+Store locally:
+
+High score
+
+Best survival time
+
+Unlocked themes
+
+Achievements
+
+Statistics
+
+Settings
+
+Coins
+
+Everything loads automatically.
+
+================================================================================
+GIT WORKFLOW
+================================================================================
+
+Initialize Git immediately.
+
+Create .gitignore.
+
+Create README.
+
+Push after every meaningful feature.
+
+Never combine unrelated work into one commit.
+
+Use conventional commit messages.
+
+Examples:
+
+feat: initialize Vite project
+
+feat: configure Tailwind CSS
+
+feat: add animated splash screen
+
+feat: implement main menu
+
+feat: create canvas renderer
+
+feat: implement custom cursor
+
+feat: add local storage manager
+
+style: improve button animations
+
+refactor: optimize render loop
+
+fix: resolve collision detection bug
+
+docs: update README
+
+chore: configure GitHub Actions
+
+After each successful feature:
+
+git add .
+git commit
+git push
+
+================================================================================
+GITHUB
+================================================================================
+
+Create repository.
+
+Push immediately.
+
+Keep repository clean.
+
+Meaningful commit history.
+
+Professional README.
+
+License.
+
+Badges.
+
+Screenshots.
+
+================================================================================
+GITHUB ACTIONS
+================================================================================
+
+Create workflow.
+
+On every push:
+
+Install dependencies.
+
+Run lint.
+
+Run tests.
+
+Build.
+
+Deploy automatically to GitHub Pages.
+
+Deployment must require zero manual steps after the initial setup.
+
+================================================================================
+CODE QUALITY
+================================================================================
+
+Never duplicate logic.
+
+Strong typing.
+
+Reusable systems.
+
+Small functions.
+
+Clean architecture.
+
+Meaningful names.
+
+No magic numbers.
+
+No console.log in production.
+
+Document complex algorithms.
+
+================================================================================
+README
+================================================================================
+
+Professional README including:
+
+Game overview
+
+Screenshots section
+
+Features
+
+Controls
+
+Installation
+
+Development
+
+Build
+
+Deployment
+
+Tech stack
+
+Project structure
+
+Future roadmap
+
+License
+
+================================================================================
+FINAL GOAL OF PART 1
+================================================================================
+
+By the end of this phase, the project should have:
+
+✔ Professional project structure
+✔ Modern React/Vite foundation
+✔ TypeScript configured
+✔ Tailwind configured
+✔ Framer Motion configured
+✔ Zustand configured
+✔ ESLint + Prettier configured
+✔ Husky configured
+✔ Git repository initialized
+✔ GitHub repository connected
+✔ GitHub Actions configured
+✔ GitHub Pages deployment working
+✔ Animated splash screen
+✔ Animated main menu
+✔ Responsive UI shell
+✔ Local storage infrastructure
+✔ Settings infrastructure
+✔ Theme infrastructure
+✔ Clean architecture ready for gameplay
+
+Do not begin implementing the gameplay engine yet. Focus entirely on creating a polished, production-ready foundation that future game systems can build upon.   # MASTER PROMPT PART 2A
+# GAME ENGINE
+
+You are now entering the gameplay implementation phase.
+
+Everything built previously is complete.
+
+Now begin implementing the actual game.
+
+This is NOT a React application.
+
+React only renders UI.
+
+Canvas renders EVERYTHING inside gameplay.
+
+Never mix gameplay with React rendering.
+
+====================================================
+GAME ENGINE ARCHITECTURE
+====================================================
+
+Design the engine similar to professional games.
+
+Engine/
+
+Game.ts
+
+GameLoop.ts
+
+Renderer.ts
+
+Input.ts
+
+Time.ts
+
+Scene.ts
+
+Physics.ts
+
+Collision.ts
+
+Audio.ts
+
+Effects.ts
+
+Particles.ts
+
+Camera.ts
+
+Events.ts
+
+Pools.ts
+
+Debug.ts
+
+====================================================
+MAIN GAME LOOP
+====================================================
+
+Use requestAnimationFrame.
+
+Never use setInterval.
+
+Game Loop
+
+while(running)
+
+Update Delta Time
+
+↓
+
+Update Input
+
+↓
+
+Update Physics
+
+↓
+
+Update Lava
+
+↓
+
+Update Platforms
+
+↓
+
+Update Enemies
+
+↓
+
+Update Powerups
+
+↓
+
+Update Particles
+
+↓
+
+Collision Detection
+
+↓
+
+Camera Shake
+
+↓
+
+Audio
+
+↓
+
+Render
+
+↓
+
+Next Frame
+
+Frame independent movement.
+
+Delta time must be normalized.
+
+Game speed should remain identical regardless of FPS.
+
+====================================================
+TIME SYSTEM
+====================================================
+
+Implement
+
+deltaTime
+
+elapsedTime
+
+survivalTime
+
+gameSpeed
+
+difficultyMultiplier
+
+freezeTime
+
+pauseTime
+
+Everything references deltaTime.
+
+====================================================
+INPUT SYSTEM
+====================================================
+
+Only mouse.
+
+Track
+
+Cursor Position
+
+Previous Position
+
+Cursor Velocity
+
+Movement Speed
+
+Direction
+
+Acceleration
+
+Distance Travelled
+
+Average Speed
+
+Maximum Speed
+
+All values updated every frame.
+
+====================================================
+CUSTOM CURSOR
+====================================================
+
+Hide browser cursor.
+
+Render custom cursor.
+
+Cursor consists of
+
+Glow
+
+Inner Core
+
+Outer Ring
+
+Particle Trail
+
+Dynamic Shadow
+
+Pulse Animation
+
+The cursor should feel alive.
+
+====================================================
+CURSOR MOVEMENT
+====================================================
+
+Movement must be
+
+Smooth
+
+Responsive
+
+Zero input lag
+
+Trail interpolation
+
+Motion blur
+
+Elastic movement
+
+Add slight smoothing.
+
+Never introduce latency.
+
+====================================================
+CURSOR STATES
+====================================================
+
+Safe
+
+Warning
+
+Danger
+
+Shielded
+
+Frozen
+
+Invincible
+
+Dead
+
+Each state has
+
+Color
+
+Glow
+
+Particles
+
+Animation
+
+Sound
+
+====================================================
+CAMERA
+====================================================
+
+Although the camera never moves,
+
+simulate movement using
+
+Screen shake
+
+Zoom
+
+Blur
+
+Chromatic Aberration
+
+Flash
+
+Heat Distortion
+
+====================================================
+GAME STATES
+====================================================
+
+Splash
+
+Menu
+
+Countdown
+
+Playing
+
+Paused
+
+Boss Intro
+
+Victory
+
+Game Over
+
+Restart
+
+Transitions between states should be animated.
+
+====================================================
+COUNTDOWN
+====================================================
+
+3
+
+2
+
+1
+
+GO
+
+Every number scales
+
+Shakes
+
+Glows
+
+Plays sound
+
+Screen pulses.
+
+====================================================
+PLAYER DATA
+====================================================
+
+Track
+
+Current Score
+
+Survival Time
+
+Coins
+
+Combo
+
+Multiplier
+
+Powerups
+
+Near Deaths
+
+Distance
+
+Average Speed
+
+Bosses Defeated
+
+====================================================
+SAVE DATA
+====================================================
+
+Save after every game.
+
+Use Local Storage.
+
+Never lose progress.
+
+====================================================
+GAME RESTART
+====================================================
+
+Restart must take
+
+under 200ms
+
+No page reload.
+
+Simply reset systems.
+
+====================================================
+SCENE SYSTEM
+====================================================
+
+Every scene owns
+
+Entities
+
+Particles
+
+Audio
+
+Events
+
+Lighting
+
+Rendering
+
+Scenes
+
+Menu
+
+Gameplay
+
+Results
+
+Settings
+
+Credits
+
+====================================================
+EVENT SYSTEM
+====================================================
+
+Every important action emits events.
+
+Example
+
+PlatformDestroyed
+
+PowerupCollected
+
+BossSpawned
+
+NearDeath
+
+GameOver
+
+ComboStarted
+
+ScoreUpdated
+
+AchievementsUnlocked
+
+====================================================
+OBJECT POOLING
+====================================================
+
+Pool
+
+Particles
+
+Fireballs
+
+Platforms
+
+Effects
+
+Smoke
+
+Sparks
+
+Never constantly create/destroy objects.
+
+Reuse them.
+
+====================================================
+DEBUG MODE
+====================================================
+
+Press F3
+
+Show
+
+FPS
+
+Frame Time
+
+Objects
+
+Particles
+
+Platforms
+
+Memory
+
+Difficulty
+
+Cursor Speed
+
+Lava Speed
+
+Collision Boxes
+
+====================================================
+PERFORMANCE
+====================================================
+
+Target
+
+<3ms update
+
+<3ms render
+
+No frame spikes
+
+Lazy loading
+
+Texture reuse
+
+Pool particles
+
+Batch rendering
+
+Avoid unnecessary allocations
+
+====================================================
+COMMIT AFTER EACH FEATURE
+
+Examples
+
+feat(engine): create core game loop
+
+feat(engine): add delta time system
+
+feat(engine): create input manager
+
+feat(cursor): implement animated custom cursor
+
+feat(camera): implement screen effects
+
+feat(debug): add performance overlay
+
+Commit
+
+Push
+
+Verify
+
+Then continue.
+
+Never implement multiple unrelated systems in one commit.  # MASTER PROMPT PART 2B
+
+====================================================
+LAVA ENGINE
+====================================================
+
+The lava is the star of the game.
+
+It must feel alive.
+
+Never static.
+
+The lava constantly expands.
+
+Contracts.
+
+Flows.
+
+Splashes.
+
+Boils.
+
+Moves.
+
+The player should fear it.
+
+====================================================
+LAVA TYPES
+====================================================
+
+Generate randomly.
+
+Wave Lava
+
+River Lava
+
+Circular Lava
+
+Cracks
+
+Flood
+
+Explosive
+
+Volcano
+
+Random Islands
+
+Moving Wall
+
+Spiral
+
+Only one or combinations depending on difficulty.
+
+====================================================
+LAVA VISUALS
+====================================================
+
+Animated noise
+
+Heat shimmer
+
+Glow
+
+Smoke
+
+Bubbles
+
+Splashes
+
+Molten cracks
+
+Bloom
+
+Dynamic lighting
+
+Reflection
+
+====================================================
+LAVA GROWTH
+====================================================
+
+Every second
+
+Increase
+
+Coverage
+
+Speed
+
+Temperature
+
+Particle count
+
+Visual intensity
+
+====================================================
+SAFE PLATFORMS
+====================================================
+
+Generate procedurally.
+
+Large
+
+Medium
+
+Tiny
+
+Moving
+
+Rotating
+
+Falling
+
+Teleporting
+
+Splitting
+
+Merging
+
+Sliding
+
+Invisible
+
+Timed
+
+Every platform should have unique behavior.
+
+====================================================
+PLATFORM GENERATOR
+====================================================
+
+Always guarantee
+
+A possible path.
+
+Never create impossible situations.
+
+Random
+
+But fair.
+
+====================================================
+PLATFORM STATES
+====================================================
+
+Safe
+
+Breaking
+
+Burning
+
+Frozen
+
+Golden
+
+Invisible
+
+Destroyed
+
+Every state has unique animation.
+
+====================================================
+COLLISION
+====================================================
+
+Collision detection
+
+Cursor
+
+↓
+
+Platform
+
+↓
+
+Lava
+
+↓
+
+Powerups
+
+↓
+
+Enemies
+
+Pixel perfect is unnecessary.
+
+Use optimized circle collision.
+
+====================================================
+PLAYER DEATH
+====================================================
+
+Touch lava
+
+↓
+
+Burn animation
+
+↓
+
+Explosion
+
+↓
+
+Particles
+
+↓
+
+Screen shake
+
+↓
+
+Game Over
+
+====================================================
+NEAR DEATH SYSTEM
+====================================================
+
+When cursor stays
+
+within X pixels
+
+of lava
+
+Increase heartbeat
+
+Glow red
+
+Camera shake
+
+Award bonus points.
+
+====================================================
+SURVIVAL SCORE
+====================================================
+
+Every second
+
++10
+
+Near lava
+
++5
+
+Perfect movement
+
+Combo
+
+Powerups
+
+Boss
+
+Milestones
+
+====================================================
+DIFFICULTY
+====================================================
+
+Every 10 seconds
+
+Increase
+
+Lava speed
+
+Platform speed
+
+Enemy count
+
+Platform size decreases
+
+Particle count
+
+Music intensity
+
+Boss probability
+
+====================================================
+GAME DIRECTOR
+====================================================
+
+Implement a dynamic difficulty manager.
+
+Monitor
+
+Player skill
+
+Average speed
+
+Near deaths
+
+Accuracy
+
+Survival time
+
+Adapt difficulty gradually.
+
+Never unfair.
+
+====================================================
+COMMITS
+
+feat(lava): implement procedural lava system
+
+feat(platform): create moving platforms
+
+feat(collision): add collision engine
+
+feat(score): implement survival scoring
+
+feat(difficulty): create adaptive difficulty manager
+
+Push after every successful feature.   # MASTER PROMPT PART 2C
+# VISUAL EFFECTS • AUDIO • PARTICLES • GAME FEEL • POLISH
+
+================================================================================
+MISSION
+================================================================================
+
+The game should never feel static.
+
+Every movement, every click, every second of gameplay should provide satisfying
+visual and audio feedback.
+
+The player should constantly feel:
+
+"I'm barely surviving."
+
+Everything should react to everything.
+
+The screen should feel alive.
+
+================================================================================
+GAME FEEL PHILOSOPHY
+================================================================================
+
+Every action needs feedback.
+
+Moving cursor?
+→ Trail.
+
+Near lava?
+→ Heat distortion.
+
+Collect powerup?
+→ Explosion.
+
+Boss appears?
+→ Screen shake.
+
+Game over?
+→ Entire screen reacts.
+
+Nothing should happen silently.
+
+Nothing should happen instantly.
+
+Everything should animate.
+
+================================================================================
+PARTICLE ENGINE
+================================================================================
+
+Create a reusable particle system.
+
+Never create particles manually.
+
+Instead use
+
+ParticleEmitter
+
+ParticleManager
+
+ParticlePool
+
+ParticleRenderer
+
+Particles must use object pooling.
+
+Never create thousands of objects.
+
+Reuse everything.
+
+================================================================================
+PARTICLE TYPES
+================================================================================
+
+Create separate particle presets.
+
+Fire Sparks
+
+Smoke
+
+Steam
+
+Ash
+
+Molten Rock
+
+Heat Waves
+
+Dust
+
+Magic
+
+Ice
+
+Electric
+
+Explosion
+
+Shockwave
+
+Glow
+
+Stars
+
+Coins
+
+Confetti
+
+Shield
+
+Lightning
+
+Snow
+
+Leaves
+
+Every particle preset should have
+
+velocity
+
+rotation
+
+gravity
+
+lifetime
+
+fade
+
+size
+
+randomness
+
+================================================================================
+CURSOR EFFECTS
+================================================================================
+
+Cursor trail
+
+Dynamic glow
+
+Particle sparks
+
+Heat aura
+
+Pulse animation
+
+Shadow
+
+Motion blur
+
+When moving quickly
+
+Trail becomes longer.
+
+When standing still
+
+Glow slowly breathes.
+
+When near lava
+
+Glow becomes orange.
+
+Trail starts burning.
+
+Smoke follows.
+
+Heartbeat sound increases.
+
+================================================================================
+LAVA EFFECTS
+================================================================================
+
+Lava should never look flat.
+
+Use
+
+Animated gradients
+
+Noise
+
+Flow animation
+
+Glow
+
+Heat shimmer
+
+Bloom
+
+Smoke
+
+Bubble bursts
+
+Small explosions
+
+Molten cracks
+
+Random embers
+
+Occasional lava splash
+
+Lava edge should pulse.
+
+================================================================================
+PLATFORM EFFECTS
+================================================================================
+
+Platforms float.
+
+Very slowly.
+
+Soft idle movement.
+
+Each platform emits tiny dust particles.
+
+Breaking platforms
+
+Crack
+
+Shake
+
+Glow red
+
+Pieces fall
+
+Dust explosion
+
+Burn away
+
+Golden platform
+
+Gold particles
+
+Sparkles
+
+Soft music
+
+Frozen platform
+
+Snow particles
+
+Ice reflections
+
+Cold mist
+
+================================================================================
+POWERUP EFFECTS
+================================================================================
+
+Each powerup should feel exciting.
+
+Spawn
+
+Flash
+
+Expand
+
+Particles
+
+Rotate
+
+Hover
+
+Collect
+
+Explosion
+
+Screen pulse
+
+Sound
+
+Text popup
+
+Examples
+
++50
+
+SHIELD
+
+FREEZE
+
+DOUBLE SCORE
+
+================================================================================
+TEXT POPUPS
+================================================================================
+
+Floating text system.
+
+Examples
+
++10
+
+COMBO
+
+PERFECT
+
+NEAR DEATH
+
+NEW RECORD
+
+POWERUP
+
+BOSS
+
+Texts should
+
+float upward
+
+fade
+
+slightly rotate
+
+scale
+
+never overlap badly
+
+================================================================================
+CAMERA EFFECTS
+================================================================================
+
+Although the camera never moves,
+
+simulate movement.
+
+Screen Shake
+
+Tiny
+
+Small
+
+Medium
+
+Large
+
+Extreme
+
+Use smooth damped motion.
+
+Never jitter.
+
+Zoom Effects
+
+Boss Intro
+
+Zoom In
+
+Powerup
+
+Tiny zoom
+
+Game Over
+
+Zoom Out
+
+Combo
+
+Punch Zoom
+
+================================================================================
+SCREEN EFFECTS
+================================================================================
+
+Create reusable effects.
+
+Flash
+
+Blur
+
+Heat Distortion
+
+Vignette
+
+Chromatic Aberration
+
+Color Shift
+
+Brightness Pulse
+
+Fade
+
+Slow Motion
+
+Blackout
+
+Red Damage Overlay
+
+White Flash
+
+================================================================================
+NEAR DEATH EXPERIENCE
+================================================================================
+
+If cursor nearly touches lava
+
+Heartbeat
+
+Vignette
+
+Slow motion
+
+Red glow
+
+Heat distortion
+
+Heavy breathing
+
+Score multiplier
+
+Player should panic.
+
+================================================================================
+BOSS INTRO
+================================================================================
+
+Everything pauses.
+
+Music fades.
+
+Screen darkens.
+
+Lava glows brighter.
+
+Large title appears
+
+WARNING
+
+BOSS APPROACHING
+
+Huge bass sound.
+
+Camera shake.
+
+Then gameplay resumes.
+
+================================================================================
+AUDIO ENGINE
+================================================================================
+
+Use Howler.js.
+
+Create
+
+MusicManager
+
+SoundManager
+
+VolumeController
+
+AudioPool
+
+Categories
+
+Music
+
+UI
+
+Gameplay
+
+Ambient
+
+Boss
+
+Voice
+
+Effects
+
+Independent volume sliders.
+
+================================================================================
+BACKGROUND MUSIC
+================================================================================
+
+Menu
+
+Calm
+
+Gameplay Early
+
+Relaxed
+
+Mid Game
+
+Faster
+
+Late Game
+
+Intense
+
+Boss
+
+Epic
+
+Near Death
+
+Heartbeat layer
+
+Game Over
+
+Soft piano
+
+Victory
+
+Celebration
+
+Crossfade between tracks.
+
+Never abruptly stop music.
+
+================================================================================
+SOUND EFFECTS
+================================================================================
+
+Hover
+
+Click
+
+Countdown
+
+GO
+
+Platform Break
+
+Explosion
+
+Fireball
+
+Powerup
+
+Boss Spawn
+
+Achievement
+
+Coin
+
+Shield
+
+Freeze
+
+Laser
+
+Earthquake
+
+Volcano
+
+Meteor
+
+Combo
+
+Near Death
+
+Game Over
+
+Every sound should be slightly randomized
+
+Pitch
+
+Volume
+
+Timing
+
+to avoid repetition.
+
+================================================================================
+RANDOM AMBIENT EVENTS
+================================================================================
+
+Occasionally
+
+Bird flies across
+
+Meteor in background
+
+Lightning flash
+
+Smoke cloud
+
+Wind gust
+
+Ash storm
+
+Volcano erupts
+
+Solar eclipse
+
+Rainbow
+
+None affect gameplay.
+
+Only atmosphere.
+
+================================================================================
+WEATHER SYSTEM
+================================================================================
+
+Randomly choose
+
+Sunny
+
+Rain
+
+Ash
+
+Fog
+
+Night
+
+Storm
+
+Wind
+
+Heatwave
+
+Each changes visuals.
+
+Some slightly affect gameplay.
+
+================================================================================
+LIGHTING
+================================================================================
+
+Dynamic lighting.
+
+Cursor emits light.
+
+Lava emits light.
+
+Powerups emit light.
+
+Boss emits light.
+
+Screen brightness changes naturally.
+
+================================================================================
+UI ANIMATIONS
+================================================================================
+
+Every button
+
+Hover
+
+Lift
+
+Scale
+
+Glow
+
+Click
+
+Compress
+
+Release
+
+Menu transitions
+
+Slide
+
+Fade
+
+Blur
+
+Scale
+
+Nothing should instantly appear.
+
+================================================================================
+RESULTS SCREEN
+================================================================================
+
+Animate score.
+
+Count upwards.
+
+Show
+
+Time Survived
+
+Score
+
+Coins
+
+Near Deaths
+
+Powerups
+
+Bosses
+
+Distance
+
+Best Score
+
+Buttons
+
+Play Again
+
+Main Menu
+
+Statistics
+
+Share Screenshot
+
+================================================================================
+SCREENSHOT MODE
+================================================================================
+
+Generate a clean end-game card.
+
+Include
+
+Score
+
+Time
+
+Coins
+
+Date
+
+Theme
+
+Difficulty
+
+This should be downloadable as PNG.
+
+Perfect for social media.
+
+================================================================================
+PERFORMANCE OPTIMIZATION
+================================================================================
+
+Maximum particles
+
+Dynamic.
+
+Adjust based on FPS.
+
+If FPS drops
+
+Reduce
+
+Smoke
+
+Spark count
+
+Glow quality
+
+Shadows
+
+Blur
+
+Never sacrifice gameplay responsiveness.
+
+================================================================================
+DEBUG TOOLS
+================================================================================
+
+Press F3
+
+Toggle
+
+Particle Count
+
+Emitters
+
+Audio
+
+Lighting
+
+FPS
+
+Frame Time
+
+Memory
+
+Collision
+
+Object Pool Usage
+
+================================================================================
+COMMIT STRATEGY
+================================================================================
+
+Every polished feature deserves its own commit.
+
+Examples
+
+feat(vfx): create particle engine
+
+feat(audio): add music manager
+
+feat(camera): implement cinematic shake
+
+feat(ui): animate score popups
+
+feat(gamefeel): add cursor trail effects
+
+feat(weather): create ambient weather system
+
+feat(performance): implement adaptive particle scaling
+
+feat(results): build animated game over screen
+
+refactor(vfx): optimize particle pooling
+
+fix(audio): resolve overlapping sound playback
+
+After EVERY successful feature
+
+git add .
+
+git commit -m "<meaningful message>"
+
+git push
+
+Wait until deployment succeeds.
+
+Then continue.
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+Imagine this game is being released on Steam.
+
+Players should say:
+
+"I can't believe this runs entirely in the browser."
+
+Every animation should feel intentional.
+
+Every sound should reinforce gameplay.
+
+Every visual effect should improve immersion.
+
+The final experience should be polished, smooth, addictive, and memorable while
+remaining lightweight enough to run comfortably on typical laptops and desktops.
+
+Never stop polishing until every interaction feels satisfying.   # MASTER PROMPT PART 3A
+# CONTENT SYSTEMS
+
+================================================================================
+MISSION
+================================================================================
+
+The core gameplay is complete.
+
+Now make the game FUN.
+
+The player should constantly experience
+
+• excitement
+
+• surprise
+
+• tension
+
+• relief
+
+• satisfaction
+
+There should never be long periods where nothing interesting happens.
+
+Every run should feel different.
+
+No two games should play exactly the same.
+
+================================================================================
+POWERUP SYSTEM
+================================================================================
+
+Build a modular powerup architecture.
+
+Powerups inherit from a common base class.
+
+Each powerup defines
+
+• name
+
+• rarity
+
+• spawn chance
+
+• duration
+
+• icon
+
+• color
+
+• animation
+
+• sound
+
+• activation logic
+
+• expiration logic
+
+Everything should be reusable.
+
+Powerups should be easy to add.
+
+================================================================================
+RARITY
+================================================================================
+
+Common
+
+Rare
+
+Epic
+
+Legendary
+
+Mythic
+
+Higher rarity
+
+↓
+
+better visuals
+
+↓
+
+better sounds
+
+↓
+
+lower spawn chance
+
+================================================================================
+POWERUPS
+================================================================================
+
+Create at minimum
+
+Shield
+
+Freeze Time
+
+Slow Time
+
+Double Score
+
+Triple Coins
+
+Magnet
+
+Teleport
+
+Golden Platform
+
+Tiny Cursor
+
+Ghost Cursor
+
+Invincibility
+
+Fire Resistance
+
+Extra Life
+
+Speed Boost
+
+Platform Repair
+
+Platform Growth
+
+Score Multiplier
+
+Combo Keeper
+
+Lava Pushback
+
+Meteor Destroyer
+
+Lucky Drop
+
+Chaos Mode
+
+Every powerup needs
+
+spawn animation
+
+idle animation
+
+collect animation
+
+expiration animation
+
+================================================================================
+POWERUP SPAWNING
+================================================================================
+
+Spawn system should consider
+
+current difficulty
+
+player performance
+
+recent drops
+
+rarity balancing
+
+avoid duplicates
+
+never overwhelm player
+
+================================================================================
+ENEMY SYSTEM
+================================================================================
+
+Enemies are obstacles.
+
+They should increase pressure.
+
+Never feel unfair.
+
+Every enemy must have
+
+spawn animation
+
+movement pattern
+
+warning indicator
+
+death animation
+
+sound
+
+particles
+
+================================================================================
+ENEMIES
+================================================================================
+
+Fireball
+
+Bouncing Ember
+
+Lava Snake
+
+Meteor
+
+Fire Tornado
+
+Laser Drone
+
+Volcano Core
+
+Burning Rock
+
+Flame Spirit
+
+Ash Cloud
+
+Magma Slime
+
+Inferno Orb
+
+Shockwave Ring
+
+Heat Mine
+
+Burning Saw
+
+Every enemy has unique behavior.
+
+================================================================================
+MOVEMENT TYPES
+================================================================================
+
+Linear
+
+Curved
+
+Circular
+
+Homing
+
+Random
+
+Patrol
+
+Bounce
+
+Wave
+
+Orbit
+
+Spiral
+
+Acceleration
+
+Teleport
+
+================================================================================
+WARNING SYSTEM
+================================================================================
+
+Never instantly kill player.
+
+Before every dangerous attack
+
+show
+
+red indicator
+
+shadow
+
+countdown
+
+sound cue
+
+glow
+
+Player should always have time to react.
+
+================================================================================
+BOSSES
+================================================================================
+
+Bosses appear
+
+every 60 seconds
+
+or
+
+after reaching score milestones.
+
+Boss introduction
+
+Pause game
+
+Darken screen
+
+Warning animation
+
+Music transition
+
+Screen shake
+
+Boss health bar
+
+================================================================================
+BOSSES
+================================================================================
+
+The Volcano King
+
+Attacks
+
+lava eruptions
+
+meteor rain
+
+fire breath
+
+platform destruction
+
+------------------------------------------------
+
+Inferno Dragon
+
+Flies across screen
+
+breathes fire
+
+burns platforms
+
+summons fireballs
+
+------------------------------------------------
+
+The Lava Eye
+
+Huge eye
+
+fires lasers
+
+tracks cursor
+
+creates lava walls
+
+------------------------------------------------
+
+Molten Titan
+
+Punches platforms
+
+causes earthquakes
+
+creates lava cracks
+
+throws molten rocks
+
+------------------------------------------------
+
+Chaos Core
+
+Random attacks
+
+teleports
+
+summons enemies
+
+changes gravity
+
+================================================================================
+BOSS PHASES
+================================================================================
+
+Phase 1
+
+Easy
+
+↓
+
+Phase 2
+
+More attacks
+
+↓
+
+Phase 3
+
+Aggressive
+
+↓
+
+Final Phase
+
+Everything becomes chaotic
+
+Music intensifies.
+
+Visual effects increase.
+
+================================================================================
+BOSS REWARDS
+================================================================================
+
+Defeat boss
+
+↓
+
+Huge explosion
+
+↓
+
+Coins
+
+↓
+
+Guaranteed powerup
+
+↓
+
+Score bonus
+
+↓
+
+Achievement check
+
+================================================================================
+MINI EVENTS
+================================================================================
+
+Randomly trigger
+
+Meteor Shower
+
+Solar Eclipse
+
+Earthquake
+
+Fire Storm
+
+Ash Rain
+
+Golden Hour
+
+Frozen World
+
+Rainbow Mode
+
+Night Mode
+
+Chaos Minute
+
+Each event
+
+30–60 seconds
+
+Unique visuals
+
+Unique gameplay modifier
+
+================================================================================
+COMBO SYSTEM
+================================================================================
+
+Reward skilled movement.
+
+Near lava repeatedly
+
+↓
+
+combo increases
+
+Collecting powerups
+
+↓
+
+extends combo
+
+Combo gives
+
+score multiplier
+
+coins
+
+visual effects
+
+================================================================================
+RISK REWARD
+================================================================================
+
+Player should be encouraged
+
+to stay close to lava.
+
+Closer
+
+↓
+
+higher multiplier
+
+↓
+
+greater danger
+
+High skill
+
+↓
+
+higher score.
+
+================================================================================
+COIN SYSTEM
+================================================================================
+
+Coins earned from
+
+survival
+
+bosses
+
+combos
+
+events
+
+powerups
+
+achievements
+
+Coins unlock cosmetics only.
+
+Never pay-to-win.
+
+================================================================================
+SPAWN DIRECTOR
+================================================================================
+
+Create an AI-like spawn director.
+
+Monitor
+
+difficulty
+
+FPS
+
+survival time
+
+powerups
+
+enemies
+
+bosses
+
+Adjust spawn rates dynamically.
+
+Keep game challenging but fair.
+
+================================================================================
+BALANCING
+================================================================================
+
+First minute
+
+Easy
+
+Second minute
+
+Medium
+
+Third minute
+
+Hard
+
+Fourth minute
+
+Very hard
+
+Five minutes+
+
+Pure survival.
+
+================================================================================
+COMMITS
+================================================================================
+
+feat(powerups): implement modular powerup framework
+
+feat(enemy): create enemy base class
+
+feat(enemy): add fireball enemy
+
+feat(enemy): add laser drone
+
+feat(boss): create Volcano King
+
+feat(events): implement meteor shower
+
+feat(balance): add adaptive spawn director
+
+Push after every completed feature.# MASTER PROMPT PART 3B
+# PROGRESSION • ACHIEVEMENTS • COSMETICS • REPLAYABILITY
+
+================================================================================
+MISSION
+================================================================================
+
+The gameplay is complete.
+
+Now build a progression system that makes players want to keep playing.
+
+Every game should reward the player.
+
+Even a failed run should contribute toward unlocking something.
+
+The player should constantly think:
+
+"Just one more run."
+
+================================================================================
+PROGRESSION PHILOSOPHY
+================================================================================
+
+Never punish the player.
+
+Always reward effort.
+
+Never create pay-to-win mechanics.
+
+Everything is unlockable by playing.
+
+Progression should feel satisfying.
+
+Unlocks should come frequently in the beginning and gradually become more
+prestigious later.
+
+================================================================================
+PLAYER PROFILE
+================================================================================
+
+Create a local player profile.
+
+Track:
+
+Player Name
+
+Total Play Time
+
+Games Played
+
+Games Won
+
+Highest Score
+
+Longest Survival
+
+Average Survival Time
+
+Coins Earned
+
+Coins Spent
+
+Bosses Defeated
+
+Powerups Collected
+
+Near Deaths
+
+Perfect Runs
+
+Current Theme
+
+Current Cursor
+
+Unlocked Cosmetics
+
+Unlocked Achievements
+
+Favorite Difficulty
+
+Favorite Theme
+
+Everything should automatically save using Local Storage.
+
+================================================================================
+ACHIEVEMENT SYSTEM
+================================================================================
+
+Build a reusable achievement framework.
+
+Each achievement contains:
+
+ID
+
+Name
+
+Description
+
+Category
+
+Difficulty
+
+Reward
+
+Icon
+
+Progress
+
+Completion Status
+
+Unlock Animation
+
+Completion Sound
+
+Hidden Flag
+
+================================================================================
+ACHIEVEMENT CATEGORIES
+================================================================================
+
+Beginner
+
+Survival
+
+Boss
+
+Powerups
+
+Movement
+
+Collection
+
+Combo
+
+Secret
+
+Challenge
+
+Legendary
+
+Completionist
+
+================================================================================
+BEGINNER ACHIEVEMENTS
+================================================================================
+
+Play First Game
+
+Survive 30 Seconds
+
+Reach 1000 Score
+
+Collect First Powerup
+
+Beat First Boss
+
+Earn First Coin
+
+Unlock First Theme
+
+================================================================================
+SURVIVAL ACHIEVEMENTS
+================================================================================
+
+Survive 1 Minute
+
+Survive 3 Minutes
+
+Survive 5 Minutes
+
+Survive 10 Minutes
+
+Survive 20 Minutes
+
+Master Survivor
+
+Immortal
+
+================================================================================
+MOVEMENT ACHIEVEMENTS
+================================================================================
+
+Travel 1000 Pixels
+
+Travel 10000 Pixels
+
+Travel 100000 Pixels
+
+Stay Near Lava 60 Seconds
+
+Perfect Platform Movement
+
+Never Stop Moving
+
+Lightning Reflexes
+
+================================================================================
+POWERUP ACHIEVEMENTS
+================================================================================
+
+Collect 10
+
+Collect 100
+
+Collect Every Type
+
+Chain 5 Powerups
+
+Chain 10 Powerups
+
+Legendary Collector
+
+================================================================================
+BOSS ACHIEVEMENTS
+================================================================================
+
+Defeat Volcano King
+
+Defeat Inferno Dragon
+
+Defeat Chaos Core
+
+Defeat Every Boss
+
+Perfect Boss Fight
+
+Beat Boss Without Damage
+
+================================================================================
+SECRET ACHIEVEMENTS
+================================================================================
+
+Hover Hidden Corner
+
+Click Secret Duck
+
+Unlock Rainbow Mode
+
+Discover Debug Easter Egg
+
+Play During Midnight
+
+Survive Blackout Mode
+
+Click Invisible Button
+
+================================================================================
+ACHIEVEMENT REWARDS
+================================================================================
+
+Coins
+
+Cursor Skins
+
+Themes
+
+Background Music
+
+Particle Effects
+
+Trails
+
+Profile Badges
+
+Title Cards
+
+Victory Animations
+
+Never reward gameplay advantages.
+
+================================================================================
+PLAYER LEVEL SYSTEM
+================================================================================
+
+Gain XP every run.
+
+XP Sources:
+
+Survival
+
+Bosses
+
+Achievements
+
+Combos
+
+Powerups
+
+Near Deaths
+
+Events
+
+Levels unlock:
+
+Themes
+
+Badges
+
+Titles
+
+Music
+
+Cosmetics
+
+Statistics
+
+================================================================================
+LEVEL MILESTONES
+================================================================================
+
+Level 5
+
+New Cursor
+
+Level 10
+
+New Theme
+
+Level 15
+
+Particle Trail
+
+Level 20
+
+Golden Cursor
+
+Level 30
+
+Legendary Theme
+
+Level 50
+
+Developer Theme
+
+Level 100
+
+Ultimate Cosmetic Pack
+
+================================================================================
+COIN ECONOMY
+================================================================================
+
+Coins are earned through gameplay only.
+
+Spend coins on:
+
+Cursor Skins
+
+Cursor Trails
+
+Platform Skins
+
+Lava Themes
+
+Background Themes
+
+Music Packs
+
+Result Screen Frames
+
+Victory Animations
+
+Profile Icons
+
+Badges
+
+================================================================================
+SHOP SYSTEM
+================================================================================
+
+Animated storefront.
+
+Categories:
+
+Cursors
+
+Trails
+
+Themes
+
+Effects
+
+Music
+
+Badges
+
+Titles
+
+Favorites
+
+Recently Unlocked
+
+Every purchase should have:
+
+Preview
+
+Animation
+
+Sound
+
+Confirmation
+
+Celebration
+
+================================================================================
+CURSOR SKINS
+================================================================================
+
+Classic
+
+Fire
+
+Ice
+
+Electric
+
+Neon
+
+Rainbow
+
+Galaxy
+
+Pixel
+
+Ghost
+
+Dragon
+
+Phoenix
+
+Crystal
+
+Void
+
+Golden
+
+Cyber
+
+Each cursor includes:
+
+Idle Animation
+
+Movement Animation
+
+Near Lava Animation
+
+Powerup Animation
+
+Death Animation
+
+================================================================================
+CURSOR TRAILS
+================================================================================
+
+Smoke
+
+Fire
+
+Ice
+
+Electric
+
+Stars
+
+Galaxy Dust
+
+Rainbow
+
+Leaves
+
+Pixels
+
+Lightning
+
+Magic
+
+Golden Sparks
+
+================================================================================
+LAVA THEMES
+================================================================================
+
+Classic Lava
+
+Blue Plasma
+
+Acid
+
+Chocolate
+
+Neon
+
+Frozen
+
+Galaxy
+
+Toxic
+
+Volcanic
+
+Digital Grid
+
+Cyber Lava
+
+Candy
+
+Molten Gold
+
+================================================================================
+BACKGROUND THEMES
+================================================================================
+
+Volcano
+
+Space
+
+Forest
+
+Castle
+
+Factory
+
+Laboratory
+
+Ocean
+
+Cyberpunk
+
+Desert
+
+Temple
+
+Sky Islands
+
+Ancient Ruins
+
+================================================================================
+MUSIC PACKS
+================================================================================
+
+Default
+
+Retro
+
+Synthwave
+
+Orchestral
+
+Electronic
+
+Chill
+
+Epic
+
+Arcade
+
+Fantasy
+
+Cyberpunk
+
+================================================================================
+DAILY LOGIN
+================================================================================
+
+Optional local reward system.
+
+Reward player for opening game daily.
+
+Rewards:
+
+Coins
+
+Themes
+
+Trails
+
+Mystery Boxes
+
+================================================================================
+DAILY CHALLENGES
+================================================================================
+
+Generate three random challenges daily.
+
+Examples:
+
+Survive 2 Minutes
+
+Collect 5 Powerups
+
+Beat One Boss
+
+Avoid Near Death
+
+Earn 5000 Score
+
+Complete Challenge
+
+↓
+
+Bonus Coins
+
+XP
+
+Badge Progress
+
+================================================================================
+WEEKLY CHALLENGES
+================================================================================
+
+Longer objectives.
+
+Examples:
+
+Defeat 20 Bosses
+
+Collect 200 Powerups
+
+Travel 500000 Pixels
+
+Earn 100000 Score
+
+================================================================================
+STATISTICS DASHBOARD
+================================================================================
+
+Beautiful analytics page.
+
+Charts and counters for:
+
+Games Played
+
+Average Score
+
+Longest Run
+
+Total Coins
+
+Total XP
+
+Favorite Theme
+
+Favorite Cursor
+
+Powerups Used
+
+Boss Wins
+
+Near Death Count
+
+Achievements
+
+================================================================================
+LEADERBOARD
+================================================================================
+
+Since there is no backend:
+
+Store Local High Scores.
+
+Display:
+
+Top 10 Runs
+
+Date
+
+Score
+
+Time
+
+Theme Used
+
+Difficulty
+
+Allow player to reset leaderboard.
+
+================================================================================
+REPLAYABILITY
+================================================================================
+
+Every run should include random combinations of:
+
+Bosses
+
+Powerups
+
+Weather
+
+Themes
+
+Events
+
+Platform Patterns
+
+Enemy Waves
+
+No two runs should feel identical.
+
+================================================================================
+COLLECTION SYSTEM
+================================================================================
+
+Completion Percentage
+
+Themes Collected
+
+Achievements Completed
+
+Bosses Defeated
+
+Powerups Found
+
+Cursor Skins Owned
+
+Music Packs
+
+Player Titles
+
+Badges
+
+Display overall completion rate.
+
+================================================================================
+EASTER EGGS
+================================================================================
+
+Hide secrets throughout the game.
+
+Ideas:
+
+Konami Code
+
+Invisible Button
+
+Secret Developer Room
+
+Rainbow Cursor
+
+Tiny Duck
+
+Hidden Credits
+
+Fake Crash Screen
+
+Old Retro Mode
+
+Secret Theme
+
+Secret Boss
+
+Reward curiosity.
+
+================================================================================
+SAVE SYSTEM
+================================================================================
+
+Autosave after:
+
+Game End
+
+Achievement Unlock
+
+Purchase
+
+Settings Change
+
+Theme Change
+
+Backup save structure.
+
+Validate corrupted saves gracefully.
+
+================================================================================
+COMMIT STRATEGY
+================================================================================
+
+Every progression feature should have its own commit.
+
+Examples:
+
+feat(profile): create player profile system
+
+feat(achievements): implement achievement framework
+
+feat(shop): build cosmetic shop
+
+feat(levels): create XP progression
+
+feat(challenges): add daily challenge generator
+
+feat(stats): create analytics dashboard
+
+feat(collection): implement completion tracker
+
+feat(cosmetics): add unlockable cursor skins
+
+fix(save): prevent save corruption
+
+refactor(shop): optimize purchase flow
+
+After EVERY completed feature:
+
+git add .
+
+git commit -m "<clear conventional commit message>"
+
+git push
+
+Verify deployment.
+
+Continue.
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+The progression system should feel like a premium indie game.
+
+Players should always have:
+
+A new achievement to chase.
+
+A cosmetic to unlock.
+
+A challenge to complete.
+
+A higher score to beat.
+
+A new theme to discover.
+
+A reason to play one more run.
+
+Everything must be polished, rewarding, responsive, animated, and satisfying.# MASTER PROMPT PART 3C
+# SETTINGS • ACCESSIBILITY • PERFORMANCE • QA • PWA • RELEASE • PRODUCTION READY
+
+================================================================================
+MISSION
+================================================================================
+
+The game is feature complete.
+
+Now transform it into a production-quality browser game that feels polished,
+stable, accessible, fast, maintainable, and ready for public release.
+
+This phase is NOT about adding more gameplay.
+
+This phase is about making every existing feature better.
+
+Nothing should feel unfinished.
+
+Nothing should feel rushed.
+
+================================================================================
+QUALITY PHILOSOPHY
+================================================================================
+
+Imagine this game will be featured on:
+
+• GitHub Trending
+• Product Hunt
+• Hacker News
+• Reddit
+• itch.io
+• Steam (Browser Demo)
+
+Players should immediately notice the polish.
+
+Every interaction should feel intentional.
+
+Every transition should feel smooth.
+
+Every setting should work.
+
+================================================================================
+SETTINGS MENU
+================================================================================
+
+Create a modern settings menu.
+
+Use animated cards.
+
+Glassmorphism UI.
+
+Smooth transitions.
+
+Instant preview.
+
+Categories:
+
+Graphics
+
+Audio
+
+Gameplay
+
+Accessibility
+
+Controls
+
+Interface
+
+Developer
+
+About
+
+================================================================================
+GRAPHICS SETTINGS
+================================================================================
+
+Allow changing
+
+Particle Count
+
+Shadow Quality
+
+Glow Quality
+
+Heat Distortion
+
+Bloom
+
+Motion Blur
+
+Screen Shake
+
+Lighting Quality
+
+Weather Effects
+
+Background Animation
+
+Frame Rate Limit
+
+Graphics Presets
+
+Low
+
+Medium
+
+High
+
+Ultra
+
+Automatic
+
+================================================================================
+AUDIO SETTINGS
+================================================================================
+
+Master Volume
+
+Music Volume
+
+Effects Volume
+
+Ambient Volume
+
+UI Volume
+
+Mute All
+
+Mute Music
+
+Mute Effects
+
+Preview sounds before saving.
+
+================================================================================
+GAMEPLAY SETTINGS
+================================================================================
+
+Difficulty
+
+Easy
+
+Normal
+
+Hard
+
+Insane
+
+Endless
+
+Enable Tutorials
+
+Show Combo Counter
+
+Show FPS
+
+Show Cursor Trail
+
+Pause on Focus Loss
+
+Auto Pause
+
+Restart Confirmation
+
+================================================================================
+ACCESSIBILITY
+================================================================================
+
+Support as many players as possible.
+
+Options:
+
+Reduced Motion
+
+High Contrast
+
+Colorblind Modes
+
+Protanopia
+
+Deuteranopia
+
+Tritanopia
+
+Large Text
+
+Large UI
+
+Disable Flashing Effects
+
+Disable Screen Shake
+
+Simplified Background
+
+Mute Heartbeat
+
+Readable Fonts
+
+================================================================================
+SAVE SETTINGS
+================================================================================
+
+Export Save
+
+Import Save
+
+Reset Statistics
+
+Reset Cosmetics
+
+Reset Everything
+
+Confirm before deleting.
+
+================================================================================
+KEYBOARD SHORTCUTS
+================================================================================
+
+ESC
+
+Pause
+
+R
+
+Restart
+
+F
+
+Fullscreen
+
+M
+
+Mute
+
+P
+
+Screenshot
+
+F3
+
+Debug
+
+F11
+
+Browser Fullscreen
+
+================================================================================
+FULLSCREEN MODE
+================================================================================
+
+Support browser fullscreen.
+
+Smooth transition.
+
+Remember preference.
+
+================================================================================
+SCREENSHOT MODE
+================================================================================
+
+Allow player to capture
+
+Current gameplay
+
+Results screen
+
+Statistics
+
+Without browser UI.
+
+Save PNG locally.
+
+================================================================================
+PWA SUPPORT
+================================================================================
+
+Configure as a Progressive Web App.
+
+Requirements
+
+Installable
+
+Works offline
+
+Custom icon
+
+Splash screen
+
+Theme color
+
+Manifest
+
+Service Worker
+
+Cache static assets
+
+================================================================================
+OFFLINE SUPPORT
+================================================================================
+
+Everything works offline.
+
+No network required after first load.
+
+Gracefully handle failed asset loading.
+
+================================================================================
+PERFORMANCE
+================================================================================
+
+Target
+
+60 FPS minimum
+
+120+ FPS preferred
+
+Optimize
+
+Particles
+
+Canvas drawing
+
+Collision
+
+Memory
+
+Audio
+
+Garbage Collection
+
+Bundle size
+
+Lazy load non-game assets.
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+No crashes.
+
+Catch unexpected errors.
+
+Show friendly fallback UI.
+
+Never expose stack traces.
+
+Recover gracefully.
+
+================================================================================
+LOADING EXPERIENCE
+================================================================================
+
+Create beautiful loading screen.
+
+Animated logo
+
+Loading bar
+
+Tips
+
+Progress percentage
+
+Fade transition
+
+Never show blank screen.
+
+================================================================================
+QA CHECKLIST
+================================================================================
+
+Test
+
+Fresh install
+
+Returning player
+
+Corrupted save
+
+Large save
+
+Window resize
+
+Fullscreen
+
+Pause
+
+Restart
+
+Rapid clicking
+
+Low FPS
+
+High FPS
+
+Audio
+
+Offline
+
+Multiple browsers
+
+================================================================================
+SUPPORTED BROWSERS
+================================================================================
+
+Latest Chrome
+
+Latest Edge
+
+Latest Firefox
+
+Latest Safari
+
+Gracefully warn if unsupported.
+
+================================================================================
+RESPONSIVE BEHAVIOR
+================================================================================
+
+Desktop
+
+Primary experience.
+
+Laptop
+
+Fully supported.
+
+Tablet
+
+Limited support with message.
+
+Phone
+
+Display polished message:
+
+"This game is designed for desktop mouse controls.
+A mobile version may arrive in the future."
+
+================================================================================
+SEO
+================================================================================
+
+Configure
+
+Meta Title
+
+Description
+
+Keywords
+
+Open Graph
+
+Twitter Cards
+
+Favicon
+
+Social Preview Image
+
+Structured metadata
+
+================================================================================
+README IMPROVEMENTS
+================================================================================
+
+Expand README.
+
+Include
+
+Project overview
+
+Features
+
+Screenshots
+
+GIFs
+
+Architecture
+
+Tech Stack
+
+Folder Structure
+
+Controls
+
+Installation
+
+Development
+
+Deployment
+
+Git Workflow
+
+Future Plans
+
+License
+
+Credits
+
+================================================================================
+LICENSE
+================================================================================
+
+Include MIT License.
+
+Credit any external assets.
+
+Document all dependencies.
+
+================================================================================
+CODE QUALITY
+================================================================================
+
+No duplicated logic.
+
+Strong typing.
+
+Reusable utilities.
+
+Reusable components.
+
+Clear naming.
+
+Comments only where useful.
+
+Document complex systems.
+
+================================================================================
+FILE ORGANIZATION
+================================================================================
+
+Every folder must have one responsibility.
+
+No giant files.
+
+Split large classes.
+
+Maximum preferred file size:
+
+~300 lines
+
+Split when necessary.
+
+================================================================================
+TESTING
+================================================================================
+
+Write tests for
+
+Utilities
+
+Scoring
+
+Collision
+
+Save System
+
+Difficulty
+
+Progression
+
+Settings
+
+Achievements
+
+Do not leave critical logic untested.
+
+================================================================================
+ANALYTICS (LOCAL ONLY)
+================================================================================
+
+Track locally
+
+Sessions
+
+Average FPS
+
+Longest Run
+
+Most Used Theme
+
+Favorite Cursor
+
+Crash Count
+
+Settings Usage
+
+Never send data anywhere.
+
+================================================================================
+RELEASE CHECKLIST
+================================================================================
+
+Before release verify:
+
+✔ No console errors
+
+✔ No TypeScript errors
+
+✔ No ESLint warnings
+
+✔ No broken assets
+
+✔ Responsive layout
+
+✔ Local saves work
+
+✔ Settings persist
+
+✔ Music loops correctly
+
+✔ All achievements unlock
+
+✔ Shop works
+
+✔ Performance acceptable
+
+✔ GitHub Actions passes
+
+✔ GitHub Pages deploys successfully
+
+================================================================================
+GITHUB ACTIONS
+================================================================================
+
+Every push should
+
+Install dependencies
+
+Run lint
+
+Run tests
+
+Build production bundle
+
+Deploy automatically
+
+Fail build if tests fail.
+
+================================================================================
+GIT WORKFLOW
+================================================================================
+
+Every meaningful improvement deserves a commit.
+
+Examples
+
+chore: configure PWA support
+
+feat(settings): implement accessibility menu
+
+feat(save): add import/export functionality
+
+feat(performance): optimize particle renderer
+
+feat(ui): improve loading screen
+
+feat(seo): add metadata and social preview
+
+test(core): add collision unit tests
+
+docs: expand README with architecture
+
+fix(audio): resolve looping issue
+
+refactor(renderer): split rendering pipeline
+
+Always
+
+git add .
+
+git commit -m "<clear conventional commit>"
+
+git push
+
+Wait for GitHub Actions.
+
+Verify deployment.
+
+Continue.
+
+================================================================================
+FINAL POLISH
+================================================================================
+
+The game should feel premium.
+
+Menus should animate beautifully.
+
+Buttons should feel tactile.
+
+Particles should never stutter.
+
+Music should transition smoothly.
+
+No abrupt changes.
+
+No unfinished screens.
+
+No placeholder art.
+
+No inconsistent spacing.
+
+No broken animations.
+
+================================================================================
+FUTURE ARCHITECTURE
+================================================================================
+
+Design systems so future updates are easy.
+
+Possible future additions:
+
+Online leaderboard
+
+Multiplayer mode
+
+Map editor
+
+Custom themes
+
+Steam release
+
+New bosses
+
+Seasonal events
+
+Holiday themes
+
+Speedrun mode
+
+Replay viewer
+
+Ghost runs
+
+Mod support
+
+Keep architecture modular so these features can be added later without major
+refactoring.
+
+================================================================================
+FINAL GOAL
+================================================================================
+
+When someone opens the game they should think:
+
+"I can't believe this is just a website."
+
+The final result should be smooth, addictive, visually impressive,
+well-organized, maintainable, fully deployable on GitHub Pages, and feel like a
+professional indie arcade game built with care.
+
+Do not stop polishing until every interaction feels satisfying. # MASTER PROMPT PART 4A
+# ART DIRECTION • UI/UX • DESIGN SYSTEM • BRANDING
+
+================================================================================
+MISSION
+================================================================================
+
+The game is mechanically complete.
+
+Now elevate it into a premium indie game through exceptional visual design,
+branding, UI/UX, and consistency.
+
+The player should recognize the game within seconds.
+
+Everything should share the same visual language.
+
+No screen should feel generic.
+
+No button should feel default.
+
+No animation should feel accidental.
+
+================================================================================
+DESIGN PHILOSOPHY
+================================================================================
+
+The visual identity should combine:
+
+• Modern Indie Games
+• AAA Menu Systems
+• Apple-level polish
+• Steam-quality presentation
+• Clean UI
+• High readability
+• Smooth animations
+• Strong color hierarchy
+• Minimal clutter
+
+The UI should always support gameplay rather than distract from it.
+
+================================================================================
+VISUAL IDENTITY
+================================================================================
+
+The game must have its own recognizable identity.
+
+Primary personality:
+
+• Energetic
+• Fast
+• Clean
+• Premium
+• Playful
+• Dangerous
+• Cinematic
+
+The game should communicate urgency without becoming visually overwhelming.
+
+================================================================================
+BRAND NAME
+================================================================================
+
+Working title:
+
+THE FLOOR IS LAVA
+
+Design the branding so the logo can eventually become its own recognizable game
+identity.
+
+================================================================================
+LOGO DESIGN
+================================================================================
+
+Create a modern logo.
+
+Requirements:
+
+Bold
+
+Minimal
+
+Readable
+
+Memorable
+
+Animated
+
+Scalable
+
+Works on
+
+Dark backgrounds
+
+Light backgrounds
+
+Icons
+
+Favicons
+
+Social media
+
+Splash screen
+
+Steam capsule
+
+Future merchandise
+
+Logo animation
+
+Glow
+
+Heat distortion
+
+Small ember particles
+
+Slow breathing effect
+
+================================================================================
+ICONOGRAPHY
+================================================================================
+
+Design a complete icon family.
+
+Icons should share the same visual style.
+
+Categories
+
+Play
+
+Pause
+
+Restart
+
+Settings
+
+Statistics
+
+Achievements
+
+Shop
+
+Coins
+
+Powerups
+
+Boss
+
+Warning
+
+Volume
+
+Music
+
+Graphics
+
+Fullscreen
+
+Back
+
+Next
+
+Exit
+
+Difficulty
+
+Themes
+
+Profile
+
+Icons should feel custom.
+
+Avoid generic icon packs whenever possible.
+
+================================================================================
+DESIGN SYSTEM
+================================================================================
+
+Create reusable design tokens.
+
+Spacing
+
+4
+
+8
+
+12
+
+16
+
+24
+
+32
+
+48
+
+64
+
+Radius
+
+Small
+
+Medium
+
+Large
+
+Pill
+
+Shadow presets
+
+Glow presets
+
+Border presets
+
+Animation presets
+
+Color presets
+
+Typography presets
+
+Everything should use centralized variables.
+
+================================================================================
+COLOR PALETTE
+================================================================================
+
+Primary
+
+Lava Orange
+
+Secondary
+
+Molten Red
+
+Accent
+
+Golden Yellow
+
+Success
+
+Emerald
+
+Danger
+
+Crimson
+
+Info
+
+Electric Blue
+
+Background
+
+Deep Charcoal
+
+Panels
+
+Dark Glass
+
+Hover
+
+Soft Glow
+
+Disabled
+
+Muted Gray
+
+Never use random colors.
+
+================================================================================
+LIGHTING STYLE
+================================================================================
+
+UI should react to nearby lava.
+
+Warm lighting.
+
+Soft bloom.
+
+Animated gradients.
+
+Glow intensity changes during gameplay.
+
+================================================================================
+GLASSMORPHISM
+================================================================================
+
+Menus should use
+
+Blur
+
+Transparency
+
+Subtle borders
+
+Soft highlights
+
+Depth
+
+Floating appearance
+
+Never overuse blur.
+
+Maintain readability.
+
+================================================================================
+TYPOGRAPHY
+================================================================================
+
+Use modern geometric fonts.
+
+Hierarchy
+
+Display
+
+Heading
+
+Subheading
+
+Body
+
+Caption
+
+Numbers
+
+Monospace (Debug)
+
+Maintain excellent readability.
+
+================================================================================
+BUTTON SYSTEM
+================================================================================
+
+Buttons should feel alive.
+
+Idle
+
+Floating animation
+
+Hover
+
+Lift
+
+Glow
+
+Expand
+
+Click
+
+Compress
+
+Release
+
+Disabled
+
+Fade
+
+Loading
+
+Spinner
+
+Success
+
+Flash green
+
+Error
+
+Shake
+
+Every button should feel tactile.
+
+================================================================================
+CARD COMPONENTS
+================================================================================
+
+Reusable animated cards.
+
+Used for
+
+Statistics
+
+Achievements
+
+Shop
+
+Settings
+
+Results
+
+Challenges
+
+Cards include
+
+Glow
+
+Hover lift
+
+Depth
+
+Animated border
+
+Soft shadows
+
+================================================================================
+MENU DESIGN
+================================================================================
+
+Menus should feel cinematic.
+
+Transitions
+
+Fade
+
+Slide
+
+Scale
+
+Blur
+
+Parallax
+
+Layered depth
+
+Animated backgrounds
+
+Background should never feel static.
+
+================================================================================
+HUD DESIGN
+================================================================================
+
+Minimal.
+
+Clean.
+
+Only show essential information.
+
+Score
+
+Time
+
+Combo
+
+Coins
+
+Powerups
+
+Boss Health
+
+Everything should animate smoothly.
+
+================================================================================
+RESULT SCREEN
+================================================================================
+
+Display
+
+Final Score
+
+Best Score
+
+Coins
+
+XP
+
+Achievements
+
+Statistics
+
+Buttons
+
+Replay
+
+Main Menu
+
+Statistics
+
+Share
+
+Count numbers upward with animation.
+
+Celebrate new records.
+
+================================================================================
+SHOP DESIGN
+================================================================================
+
+Looks like a premium game store.
+
+Smooth scrolling.
+
+Preview cosmetics.
+
+Animated purchases.
+
+Coin balance always visible.
+
+Purchased items clearly marked.
+
+================================================================================
+ACHIEVEMENT DESIGN
+================================================================================
+
+Each achievement should include
+
+Icon
+
+Title
+
+Description
+
+Progress Bar
+
+Difficulty Color
+
+Reward
+
+Unlock Animation
+
+Celebration Sound
+
+Hidden achievements should appear mysterious.
+
+================================================================================
+SETTINGS DESIGN
+================================================================================
+
+Tabbed layout.
+
+Smooth transitions.
+
+Instant preview.
+
+Reset confirmation.
+
+Search bar for settings.
+
+Tooltips for advanced options.
+
+================================================================================
+STATISTICS PAGE
+================================================================================
+
+Beautiful dashboard.
+
+Animated counters.
+
+Progress circles.
+
+Graphs.
+
+Completion percentage.
+
+Favorite theme.
+
+Favorite cursor.
+
+Longest survival.
+
+Most used powerup.
+
+================================================================================
+THEME SYSTEM
+================================================================================
+
+Support multiple themes.
+
+Every theme changes
+
+Background
+
+Buttons
+
+Cursor
+
+Panels
+
+Particles
+
+Lighting
+
+Audio accent colors
+
+Themes should switch instantly without page reload.
+
+================================================================================
+MICROCOPY
+================================================================================
+
+Use friendly and playful language.
+
+Examples
+
+Instead of
+
+Game Over
+
+Try
+
+"You lasted longer than the lava expected."
+
+Instead of
+
+Settings Saved
+
+Use
+
+"Settings locked in."
+
+Small touches create personality.
+
+================================================================================
+EMPTY STATES
+================================================================================
+
+Never leave empty pages.
+
+Example
+
+No achievements
+
+↓
+
+Display encouraging illustration
+
+No statistics
+
+↓
+
+Show motivational message
+
+No shop items
+
+↓
+
+Display coming soon animation
+
+================================================================================
+ERROR STATES
+================================================================================
+
+Friendly.
+
+Never technical.
+
+Instead of
+
+Unexpected Error
+
+Say
+
+"The lava broke something... refreshing should cool it down."
+
+================================================================================
+LOADING EXPERIENCE
+================================================================================
+
+Beautiful loading animation.
+
+Tips rotate.
+
+Progress bar glows.
+
+Logo animates.
+
+Never display a blank screen.
+
+================================================================================
+ONBOARDING
+================================================================================
+
+First-time player experience.
+
+Short tutorial.
+
+Animated hints.
+
+Simple controls.
+
+Teach
+
+Cursor
+
+Platforms
+
+Lava
+
+Powerups
+
+Near Death
+
+Bosses
+
+Tutorial disappears forever after completion unless manually replayed.
+
+================================================================================
+ACCESSIBILITY
+================================================================================
+
+Every UI element
+
+Keyboard focus
+
+Readable contrast
+
+Scalable
+
+Screen reader labels where appropriate
+
+Large click targets
+
+Reduced motion support
+
+================================================================================
+BRANDING ASSETS
+================================================================================
+
+Create assets for
+
+Logo
+
+Wordmark
+
+Favicon
+
+App Icon
+
+Loading Icon
+
+GitHub Banner
+
+Social Banner
+
+Open Graph Image
+
+README Header
+
+Profile Badge
+
+All assets should follow one visual language.
+
+================================================================================
+GITHUB REPOSITORY PRESENTATION
+================================================================================
+
+Repository should look premium.
+
+README includes
+
+Hero Banner
+
+Screenshots
+
+Feature Cards
+
+Architecture Diagram
+
+Folder Structure
+
+Tech Stack
+
+Setup Instructions
+
+Deployment
+
+Roadmap
+
+Contribution Guide
+
+License
+
+Animated GIF previews
+
+Professional badges
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+Every screen should be screenshot-worthy.
+
+Every menu should feel responsive.
+
+Every transition should feel smooth.
+
+Every color should have purpose.
+
+Every icon should belong to the same design language.
+
+A player should immediately recognize the game's identity from a single screenshot.
+
+Do not accept "good enough."
+
+Polish until every interaction feels intentional and every visual element contributes to a cohesive premium experience.
+
+================================================================================
+GIT WORKFLOW
+================================================================================
+
+Commit after each major design milestone.
+
+Examples
+
+feat(ui): create design token system
+
+feat(branding): add animated game logo
+
+feat(theme): implement dynamic theme engine
+
+feat(ui): build premium settings interface
+
+feat(shop): redesign cosmetic storefront
+
+feat(stats): create animated analytics dashboard
+
+style(ui): improve button interactions
+
+refactor(theme): centralize color variables
+
+docs: update design guidelines
+
+Push every completed milestone to GitHub.
+
+Verify GitHub Actions deployment before continuing.# MASTER PROMPT PART 4B
+# MOTION DESIGN • ANIMATIONS • MICRO INTERACTIONS • CINEMATIC EXPERIENCE
+
+================================================================================
+MISSION
+================================================================================
+
+The game is fully functional.
+
+Now make it FEEL incredible.
+
+Every movement should have weight.
+
+Every click should feel satisfying.
+
+Every transition should feel intentional.
+
+Nothing should instantly appear.
+
+Nothing should instantly disappear.
+
+Everything should move naturally.
+
+The player should subconsciously enjoy simply interacting with the UI.
+
+Think like a Motion Designer at Apple or a UI Designer at Riot Games.
+
+================================================================================
+MOTION PHILOSOPHY
+================================================================================
+
+Every animation should answer one question:
+
+"What is the player supposed to notice?"
+
+Animation should improve clarity.
+
+Animation should never distract.
+
+Animation should reinforce gameplay.
+
+Never animate for the sake of animation.
+
+================================================================================
+ANIMATION PRINCIPLES
+================================================================================
+
+Use
+
+Ease In
+
+Ease Out
+
+Ease In Out
+
+Spring
+
+Elastic
+
+Bounce
+
+Overshoot
+
+Never linear animation.
+
+Every movement should accelerate and decelerate naturally.
+
+================================================================================
+GLOBAL ANIMATION SYSTEM
+================================================================================
+
+Create reusable animation presets.
+
+Fast
+
+Normal
+
+Slow
+
+Punch
+
+Bounce
+
+Shake
+
+Fade
+
+Scale
+
+Slide
+
+Rotate
+
+Float
+
+Glow Pulse
+
+Heartbeat
+
+Wave
+
+Everything should use centralized animation presets.
+
+================================================================================
+MENU ANIMATIONS
+================================================================================
+
+Main Menu
+
+Fade In
+
+Scale Up
+
+Blur Reduction
+
+Background slowly appears
+
+Logo animates first
+
+Buttons animate one after another
+
+Hover
+
+Lift
+
+Glow
+
+Scale 1.05
+
+Click
+
+Compress
+
+Release
+
+Particles
+
+Sound
+
+================================================================================
+BUTTON MICROINTERACTIONS
+================================================================================
+
+Buttons should feel alive.
+
+Idle
+
+Small breathing motion
+
+Hover
+
+Glow increases
+
+Shadow deepens
+
+Lift upward
+
+Click
+
+Compress
+
+Tiny screen shake
+
+Success flash
+
+Loading spinner
+
+Disabled fade
+
+Every button should provide visual feedback.
+
+================================================================================
+CURSOR ANIMATION
+================================================================================
+
+Cursor should never be static.
+
+Idle
+
+Pulse
+
+Breathing
+
+Glow
+
+Movement
+
+Stretch slightly
+
+Trail bends
+
+Near Lava
+
+Glow intensifies
+
+Color shifts
+
+Smoke appears
+
+Heartbeat pulse
+
+Powerup
+
+Burst animation
+
+Death
+
+Explode into particles
+
+Respawn
+
+Materialize smoothly
+
+================================================================================
+COUNTDOWN ANIMATION
+================================================================================
+
+3
+
+2
+
+1
+
+GO
+
+Each number
+
+Scale from 300%
+
+Bounce
+
+Glow
+
+Particles
+
+Camera pulse
+
+Bass sound
+
+GO should explode into gameplay.
+
+================================================================================
+SCORE ANIMATION
+================================================================================
+
+Score should count smoothly.
+
+Combo
+
+Scale
+
+Flash
+
+Glow
+
+High Combo
+
+Screen pulse
+
+Number shake
+
+New High Score
+
+Celebrate
+
+Confetti
+
+Golden glow
+
+================================================================================
+POWERUP ANIMATIONS
+================================================================================
+
+Spawn
+
+Grow
+
+Rotate
+
+Glow
+
+Hover
+
+Collect
+
+Implosion
+
+Explosion
+
+Light burst
+
+Particle ring
+
+Floating text
+
+Expiration
+
+Fade
+
+Shrink
+
+Particles disappear
+
+================================================================================
+BOSS INTRO CINEMATICS
+================================================================================
+
+Pause gameplay.
+
+Darken screen.
+
+Warning siren.
+
+Camera shake.
+
+Logo slides in.
+
+Boss silhouette appears.
+
+Health bar fills dramatically.
+
+Music crossfades.
+
+Resume gameplay.
+
+Boss should feel important.
+
+================================================================================
+BOSS DEATH
+================================================================================
+
+Slow motion
+
+Huge explosion
+
+Shockwave
+
+Particle burst
+
+Camera shake
+
+Score celebration
+
+Coins fly outward
+
+Victory sound
+
+================================================================================
+PLATFORM ANIMATIONS
+================================================================================
+
+Spawn
+
+Rise from lava
+
+Hover
+
+Float
+
+Rotate slightly
+
+Break
+
+Crack
+
+Shake
+
+Pieces fall
+
+Burn
+
+Fade into lava
+
+Golden Platform
+
+Sparkles
+
+Light rays
+
+================================================================================
+LAVA ANIMATIONS
+================================================================================
+
+Constant movement.
+
+Flow
+
+Pulse
+
+Bubble
+
+Splash
+
+Steam
+
+Glow variation
+
+Heat shimmer
+
+Occasional eruptions
+
+Never repeat exact patterns.
+
+================================================================================
+WEATHER TRANSITIONS
+================================================================================
+
+Sunny → Rain
+
+Fade clouds
+
+Particles change
+
+Lighting shifts
+
+Wind changes
+
+Music adjusts
+
+Night → Day
+
+Sky gradually changes
+
+Stars disappear
+
+Lighting warms
+
+================================================================================
+SCREEN TRANSITIONS
+================================================================================
+
+Never hard cut.
+
+Use
+
+Fade
+
+Scale
+
+Blur
+
+Slide
+
+Crossfade
+
+Light flash
+
+Smoke transition
+
+================================================================================
+RESULT SCREEN
+================================================================================
+
+Background blur
+
+Statistics appear one by one
+
+Numbers count upward
+
+Achievements animate in
+
+Buttons appear last
+
+Celebrate new records
+
+================================================================================
+ACHIEVEMENT UNLOCK
+================================================================================
+
+Popup slides in
+
+Golden border
+
+Glow
+
+Sparkles
+
+Sound
+
+Icon scales
+
+Progress bar updates
+
+Never interrupt gameplay.
+
+================================================================================
+SHOP EXPERIENCE
+================================================================================
+
+Item hover
+
+Rotate slightly
+
+Glow
+
+Preview instantly
+
+Purchase
+
+Coins animate downward
+
+Item unlocks
+
+Celebration
+
+Confetti
+
+================================================================================
+SETTINGS INTERACTIONS
+================================================================================
+
+Sliders
+
+Smooth movement
+
+Switches
+
+Animated toggle
+
+Dropdowns
+
+Expand naturally
+
+Apply changes instantly
+
+================================================================================
+SCREEN EFFECTS
+================================================================================
+
+Camera Shake
+
+Heat Distortion
+
+Chromatic Aberration
+
+Bloom
+
+Vignette
+
+Motion Blur
+
+Flash
+
+Slow Motion
+
+Lens Glow
+
+Use effects sparingly.
+
+Gameplay clarity is more important than visual spectacle.
+
+================================================================================
+SOUND DESIGN
+================================================================================
+
+Every interaction needs audio.
+
+Hover
+
+Click
+
+Countdown
+
+Powerup
+
+Boss
+
+Combo
+
+Achievement
+
+Coin
+
+Explosion
+
+Near Death
+
+Game Over
+
+Victory
+
+Randomize pitch slightly.
+
+Avoid repetitive sounds.
+
+================================================================================
+MUSIC SYSTEM
+================================================================================
+
+Adaptive music.
+
+Calm
+
+↓
+
+Tense
+
+↓
+
+Boss
+
+↓
+
+Victory
+
+↓
+
+Results
+
+Crossfade naturally.
+
+Never abruptly stop tracks.
+
+================================================================================
+HAPTIC-LIKE FEEDBACK
+================================================================================
+
+Even without controller vibration,
+
+simulate impact using
+
+Screen shake
+
+Audio punch
+
+Particle burst
+
+Scale animation
+
+Timing
+
+Everything should feel responsive.
+
+================================================================================
+LOADING ANIMATIONS
+================================================================================
+
+Animated logo
+
+Rotating ember
+
+Progress bar
+
+Tips
+
+Background particles
+
+Loading should feel intentional.
+
+================================================================================
+MICRO DETAILS
+================================================================================
+
+Cursor leaves tiny footprints on dusty platforms.
+
+Coins bounce before being collected.
+
+Particles react to cursor movement.
+
+Buttons emit tiny sparks when clicked.
+
+Boss health bar pulses when low.
+
+Combo meter glows brighter at high streaks.
+
+Near Death warning subtly increases heartbeat volume.
+
+Tiny ambient embers float through menus.
+
+Nothing should feel lifeless.
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+If someone records the game with no audio,
+
+the animations alone should communicate excitement.
+
+If someone closes their eyes,
+
+the sound design alone should communicate what is happening.
+
+Visuals and audio should reinforce each other.
+
+Every animation should improve the player's experience.
+
+================================================================================
+COMMIT STRATEGY
+================================================================================
+
+Examples
+
+feat(animation): create global motion preset system
+
+feat(cursor): animate cursor states
+
+feat(ui): add premium button interactions
+
+feat(boss): implement cinematic boss intro
+
+feat(audio): add adaptive music system
+
+feat(vfx): improve lava animation
+
+feat(results): animate score counters
+
+style(animation): refine menu transitions
+
+refactor(motion): centralize animation utilities
+
+Push after every completed milestone.
+
+Never combine unrelated animation systems into one commit. # MASTER PROMPT PART 4C-1
+# BRANDING • MARKETING • README • RELEASE ASSETS • PORTFOLIO PRESENTATION
+
+================================================================================
+MISSION
+================================================================================
+
+The game is now production ready.
+
+Now make it LOOK like a professional indie game that people immediately want to
+play.
+
+Everything outside the game should be just as polished as the game itself.
+
+Imagine someone finds the repository.
+
+Within 10 seconds they should think
+
+"This is one of the coolest browser games I've seen."
+
+================================================================================
+PROJECT BRANDING
+================================================================================
+
+The project should have a complete visual identity.
+
+Everything should follow one consistent design language.
+
+No random colors.
+
+No inconsistent typography.
+
+No placeholder graphics.
+
+Every asset should look like it belongs together.
+
+================================================================================
+OFFICIAL GAME NAME
+================================================================================
+
+THE FLOOR IS LAVA
+
+Subtitle
+
+Survive.
+Adapt.
+Don't Burn.
+
+================================================================================
+GAME TAGLINE
+================================================================================
+
+Possible taglines
+
+"The floor won't wait."
+
+"Keep Moving."
+
+"One mistake is all it takes."
+
+"Can you survive another minute?"
+
+"Move or melt."
+
+================================================================================
+LOGO
+================================================================================
+
+Create a premium logo.
+
+Requirements
+
+Modern
+
+Minimal
+
+Bold
+
+Recognizable
+
+Animated
+
+Transparent PNG
+
+SVG version
+
+Dark version
+
+Light version
+
+Square version
+
+Horizontal version
+
+Favicon version
+
+Animated splash version
+
+================================================================================
+LOGO ANIMATION
+================================================================================
+
+Animate
+
+Glow
+
+Heat distortion
+
+Lava cracks
+
+Embers
+
+Smoke
+
+Subtle scale
+
+Never make it distracting.
+
+================================================================================
+APPLICATION ICON
+================================================================================
+
+Design
+
+16x16
+
+32x32
+
+64x64
+
+128x128
+
+256x256
+
+512x512
+
+1024x1024
+
+Works as
+
+Favicon
+
+Desktop Icon
+
+PWA Icon
+
+GitHub Social Image
+
+================================================================================
+VISUAL IDENTITY
+================================================================================
+
+Everything should follow
+
+Dark background
+
+Warm lighting
+
+Orange highlights
+
+Clean typography
+
+Rounded corners
+
+Soft shadows
+
+Premium glass panels
+
+================================================================================
+SOCIAL MEDIA KIT
+================================================================================
+
+Create assets for
+
+Twitter/X
+
+LinkedIn
+
+Instagram
+
+Threads
+
+Discord
+
+GitHub
+
+Reddit
+
+Product Hunt
+
+itch.io
+
+Every banner should follow the same branding.
+
+================================================================================
+SOCIAL PREVIEW IMAGE
+================================================================================
+
+Design a beautiful Open Graph image.
+
+Include
+
+Logo
+
+Gameplay Screenshot
+
+Lava
+
+Cursor
+
+Tagline
+
+Website URL
+
+GitHub URL
+
+Readable on dark mode.
+
+================================================================================
+SCREENSHOTS
+================================================================================
+
+Prepare screenshot scenes.
+
+Main Menu
+
+Gameplay
+
+Boss Fight
+
+Powerup Collection
+
+Achievement Unlock
+
+Results Screen
+
+Shop
+
+Statistics
+
+Settings
+
+Themes
+
+Each screenshot should look promotional.
+
+================================================================================
+PROMOTIONAL GIFS
+================================================================================
+
+Create looping GIFs.
+
+Gameplay
+
+Boss
+
+Powerups
+
+Lava Flow
+
+Cursor
+
+Particles
+
+Menu
+
+Theme Switching
+
+Each GIF
+
+3-8 seconds
+
+High quality
+
+Small file size
+
+================================================================================
+GAME TRAILER
+================================================================================
+
+Plan a 30-60 second trailer.
+
+Scene 1
+
+Logo reveal
+
+↓
+
+Scene 2
+
+Cursor movement
+
+↓
+
+Scene 3
+
+Lava begins
+
+↓
+
+Scene 4
+
+Boss appears
+
+↓
+
+Scene 5
+
+Powerups
+
+↓
+
+Scene 6
+
+Chaos
+
+↓
+
+Scene 7
+
+High score
+
+↓
+
+Scene 8
+
+Call To Action
+
+End with
+
+Play Now
+
+================================================================================
+README DESIGN
+================================================================================
+
+README should feel like a product page.
+
+Hero Banner
+
+Animated GIF
+
+Project Description
+
+Features
+
+Screenshots
+
+Gameplay
+
+Architecture
+
+Folder Structure
+
+Tech Stack
+
+Installation
+
+Development
+
+Deployment
+
+Controls
+
+Roadmap
+
+Credits
+
+License
+
+Contributing
+
+Known Issues
+
+Future Plans
+
+================================================================================
+README HERO
+================================================================================
+
+Top section
+
+Large Banner
+
+Logo
+
+Badges
+
+Version
+
+GitHub Stars
+
+License
+
+Last Commit
+
+Live Demo
+
+Technology Badges
+
+Immediately followed by
+
+Play Online
+
+GitHub Repository
+
+Documentation
+
+================================================================================
+FEATURE SHOWCASE
+================================================================================
+
+Display beautiful feature cards.
+
+Examples
+
+🔥 Dynamic Lava Engine
+
+⚡ Smooth 144 FPS Gameplay
+
+🎯 Procedural Platform Generation
+
+👑 Boss Battles
+
+🏆 Achievement System
+
+🎨 Unlockable Themes
+
+💰 Cosmetic Shop
+
+📊 Statistics Dashboard
+
+================================================================================
+TECH STACK SECTION
+================================================================================
+
+Present technologies professionally.
+
+React
+
+Vite
+
+TypeScript
+
+Tailwind CSS
+
+Framer Motion
+
+Howler.js
+
+HTML5 Canvas
+
+Zustand
+
+GitHub Pages
+
+GitHub Actions
+
+Vitest
+
+ESLint
+
+Prettier
+
+================================================================================
+ARCHITECTURE DIAGRAM
+================================================================================
+
+Include clean diagrams.
+
+User
+
+↓
+
+React UI
+
+↓
+
+Canvas Engine
+
+↓
+
+Game Systems
+
+↓
+
+Rendering
+
+↓
+
+Audio
+
+↓
+
+Storage
+
+Document responsibilities clearly.
+
+================================================================================
+PROJECT SHOWCASE
+================================================================================
+
+Repository should feel like a flagship project.
+
+Organized folders.
+
+Consistent naming.
+
+Professional commit history.
+
+No unnecessary files.
+
+No debug leftovers.
+
+No commented-out code.
+
+================================================================================
+PORTFOLIO QUALITY
+================================================================================
+
+Assume recruiters will inspect every file.
+
+Every folder should look intentional.
+
+Every README section should be polished.
+
+Every screenshot should look cinematic.
+
+================================================================================
+LIVE WEBSITE
+================================================================================
+
+Deploy using
+
+GitHub Pages
+
+Automatically through GitHub Actions.
+
+Custom 404 page.
+
+Custom loading screen.
+
+Custom favicon.
+
+Professional domain support ready.
+
+================================================================================
+LOADING PAGE
+================================================================================
+
+Instead of blank white screen
+
+Show
+
+Animated logo
+
+Loading percentage
+
+Tips
+
+Particles
+
+Background animation
+
+================================================================================
+ABOUT PAGE
+================================================================================
+
+Create
+
+About Game
+
+Story
+
+Technology
+
+Developer Notes
+
+Credits
+
+Open Source Libraries
+
+Special Thanks
+
+================================================================================
+CHANGELOG
+================================================================================
+
+Maintain CHANGELOG.md
+
+Follow semantic versioning.
+
+v0.1
+
+Prototype
+
+v0.5
+
+Gameplay
+
+v0.8
+
+Content Complete
+
+v1.0
+
+Official Release
+
+================================================================================
+CONTRIBUTING
+================================================================================
+
+Professional contribution guide.
+
+Coding Standards
+
+Folder Structure
+
+Commit Convention
+
+Branch Naming
+
+Pull Requests
+
+Issue Templates
+
+================================================================================
+LICENSE
+================================================================================
+
+MIT License
+
+Credit
+
+Fonts
+
+Icons
+
+Audio
+
+External Assets
+
+Open Source Libraries
+
+================================================================================
+RELEASE NOTES
+================================================================================
+
+Create release notes template.
+
+Highlights
+
+New Features
+
+Fixes
+
+Performance
+
+Known Issues
+
+Future Plans
+
+================================================================================
+PRESS KIT
+================================================================================
+
+Prepare downloadable press assets.
+
+Logo
+
+Icons
+
+Screenshots
+
+Trailer
+
+Feature List
+
+Description
+
+Contact
+
+Website
+
+Repository
+
+================================================================================
+ITCH.IO PAGE
+================================================================================
+
+Prepare store page.
+
+Game Description
+
+Features
+
+Screenshots
+
+Trailer
+
+Controls
+
+Credits
+
+Version History
+
+Future Updates
+
+================================================================================
+SEO
+================================================================================
+
+Configure
+
+Title
+
+Meta Description
+
+Keywords
+
+Open Graph
+
+Twitter Cards
+
+Structured Data
+
+Social Preview
+
+Theme Color
+
+Manifest
+
+================================================================================
+CALL TO ACTION
+================================================================================
+
+Every page should encourage
+
+Play Game
+
+View GitHub
+
+Star Repository
+
+Report Bug
+
+Suggest Feature
+
+Share With Friends
+
+================================================================================
+COMMIT STRATEGY
+================================================================================
+
+Examples
+
+feat(marketing): create hero banner
+
+feat(readme): redesign project documentation
+
+feat(branding): add official logo assets
+
+feat(media): create gameplay screenshots
+
+feat(trailer): add promotional trailer assets
+
+feat(seo): optimize metadata
+
+docs: add changelog
+
+docs: create contribution guide
+
+Push after every milestone.
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+The GitHub repository should look like an award-winning open-source project.
+
+The landing page should feel premium.
+
+The README should be one of the best examples of project documentation.
+
+The branding should be instantly recognizable.
+
+Every asset should feel handcrafted.
+
+If someone discovers this project on GitHub, Product Hunt, or Reddit,
+they should immediately want to click "Play".# MASTER PROMPT PART 4C-2B
+# FINAL PRODUCTION • PERFORMANCE • QA • RELEASE • STUDIO QUALITY
+
+================================================================================
+MISSION
+================================================================================
+
+The game is feature complete.
+
+Now prepare it for a public release.
+
+Nothing should feel unfinished.
+
+Nothing should feel experimental.
+
+Nothing should feel like a student project.
+
+Treat this project as if thousands of players will discover it on GitHub,
+itch.io, Product Hunt, Reddit, and social media.
+
+The objective is stability, performance, maintainability, and an exceptional
+first impression.
+
+================================================================================
+FINAL OPTIMIZATION PASS
+================================================================================
+
+Review every system.
+
+Ask:
+
+Can this be faster?
+
+Can this be cleaner?
+
+Can this animation be smoother?
+
+Can this code be more maintainable?
+
+Can this interaction feel better?
+
+Optimize before adding anything new.
+
+================================================================================
+FRAME RATE TARGETS
+================================================================================
+
+Performance goals
+
+• Minimum 60 FPS on average laptops
+• 120+ FPS on gaming hardware
+• Stable frame pacing
+• No noticeable input delay
+• No frame spikes
+• Fast startup
+• Low memory usage
+
+================================================================================
+MEMORY MANAGEMENT
+================================================================================
+
+Review all allocations.
+
+Avoid unnecessary object creation.
+
+Reuse:
+
+Particles
+
+Enemies
+
+Platforms
+
+Powerups
+
+Effects
+
+Audio objects
+
+Textures
+
+Animations
+
+Timers
+
+Implement object pools wherever practical.
+
+================================================================================
+CANVAS OPTIMIZATION
+================================================================================
+
+Only redraw what is necessary.
+
+Cache reusable graphics.
+
+Avoid unnecessary state changes.
+
+Batch draw calls when possible.
+
+Use requestAnimationFrame only.
+
+Never use expensive operations inside the render loop unless required.
+
+================================================================================
+CODE REVIEW CHECKLIST
+================================================================================
+
+Every file should pass review.
+
+Check for
+
+Unused variables
+
+Unused imports
+
+Duplicate logic
+
+Magic numbers
+
+Poor naming
+
+Large functions
+
+Large components
+
+Deep nesting
+
+Repeated calculations
+
+Dead code
+
+Commented-out code
+
+Temporary debugging code
+
+TODOs without tracking
+
+================================================================================
+TYPE SAFETY
+================================================================================
+
+Enable strict TypeScript.
+
+Avoid "any".
+
+Prefer explicit types.
+
+Create reusable interfaces.
+
+Validate data loaded from Local Storage.
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Every potentially failing operation should fail gracefully.
+
+Examples
+
+Missing save data
+
+↓
+
+Create defaults
+
+Corrupted settings
+
+↓
+
+Reset safely
+
+Missing assets
+
+↓
+
+Fallback asset
+
+Audio failure
+
+↓
+
+Continue silently
+
+Unexpected runtime error
+
+↓
+
+Display friendly recovery screen
+
+Never crash the application.
+
+================================================================================
+LOCAL STORAGE
+================================================================================
+
+Version save data.
+
+Support migration.
+
+Handle corrupted saves.
+
+Backup before overwriting.
+
+Validate every field.
+
+Never assume stored data is correct.
+
+================================================================================
+ACCESSIBILITY AUDIT
+================================================================================
+
+Verify
+
+High contrast
+
+Reduced motion
+
+Keyboard navigation
+
+Readable fonts
+
+Large clickable targets
+
+Colorblind modes
+
+Pause functionality
+
+Responsive text scaling
+
+Every feature should remain playable with accessibility options enabled.
+
+================================================================================
+RESPONSIVE TESTING
+================================================================================
+
+Test
+
+1280x720
+
+1366x768
+
+1440x900
+
+1920x1080
+
+2560x1440
+
+Ultrawide
+
+Ensure UI scales gracefully.
+
+Gameplay area should remain consistent.
+
+================================================================================
+BROWSER TESTING
+================================================================================
+
+Verify functionality in
+
+Chrome
+
+Edge
+
+Firefox
+
+Safari
+
+Check
+
+Canvas
+
+Audio
+
+Fullscreen
+
+Local Storage
+
+PWA
+
+Animations
+
+================================================================================
+PERFORMANCE PROFILING
+================================================================================
+
+Profile
+
+Frame time
+
+Render time
+
+Update time
+
+Particle count
+
+Memory
+
+Garbage collection
+
+Audio latency
+
+Record baseline metrics.
+
+Identify bottlenecks.
+
+Optimize before release.
+
+================================================================================
+AUTOMATED TESTS
+================================================================================
+
+Write tests for
+
+Collision detection
+
+Score calculation
+
+Difficulty scaling
+
+Powerup duration
+
+Achievement unlocking
+
+Save/load
+
+Shop purchases
+
+Settings persistence
+
+Theme switching
+
+Game restart
+
+Ensure deterministic behavior where applicable.
+
+================================================================================
+MANUAL QA CHECKLIST
+================================================================================
+
+Verify
+
+✔ Main menu
+
+✔ New game
+
+✔ Pause
+
+✔ Resume
+
+✔ Restart
+
+✔ Game over
+
+✔ Boss fights
+
+✔ Powerups
+
+✔ Achievements
+
+✔ Shop
+
+✔ Statistics
+
+✔ Themes
+
+✔ Save persistence
+
+✔ Settings
+
+✔ Fullscreen
+
+✔ PWA install
+
+✔ Offline mode
+
+✔ GitHub Pages deployment
+
+✔ README links
+
+✔ Social preview
+
+✔ SEO metadata
+
+✔ No console errors
+
+================================================================================
+SECURITY REVIEW
+================================================================================
+
+Ensure
+
+No secrets committed
+
+No API keys
+
+No exposed tokens
+
+No unnecessary permissions
+
+No unsafe HTML injection
+
+Validate imported save files
+
+Escape dynamic content
+
+================================================================================
+GITHUB ACTIONS
+================================================================================
+
+Pipeline should
+
+Install dependencies
+
+Run lint
+
+Run tests
+
+Build production bundle
+
+Verify build size
+
+Deploy to GitHub Pages
+
+Fail on any error
+
+Generate deployment summary
+
+================================================================================
+BUILD OPTIMIZATION
+================================================================================
+
+Enable
+
+Code splitting
+
+Tree shaking
+
+Asset compression
+
+Minification
+
+Hashed filenames
+
+Source maps (development only)
+
+Preload critical assets
+
+Lazy load optional assets
+
+================================================================================
+PWA VERIFICATION
+================================================================================
+
+Confirm
+
+Install prompt works
+
+Offline cache works
+
+Manifest is valid
+
+Icons display correctly
+
+Theme color matches branding
+
+Splash screen appears
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+Complete documentation should include
+
+Architecture overview
+
+Folder structure
+
+Coding standards
+
+Development workflow
+
+Deployment guide
+
+Troubleshooting
+
+FAQ
+
+Future roadmap
+
+Known limitations
+
+Contribution guide
+
+================================================================================
+VERSIONING
+================================================================================
+
+Adopt semantic versioning.
+
+v0.1.0
+
+Prototype
+
+v0.5.0
+
+Core gameplay
+
+v0.9.0
+
+Feature complete
+
+v1.0.0
+
+Official release
+
+Maintain CHANGELOG.md.
+
+================================================================================
+LAUNCH CHECKLIST
+================================================================================
+
+Before release
+
+✔ All features implemented
+
+✔ No placeholder assets
+
+✔ No broken links
+
+✔ No console warnings
+
+✔ Responsive UI
+
+✔ Stable FPS
+
+✔ Automated deployment succeeds
+
+✔ README complete
+
+✔ License included
+
+✔ Screenshots updated
+
+✔ Trailer prepared
+
+✔ Repository cleaned
+
+✔ Final tag created
+
+================================================================================
+POST-LAUNCH PREPARATION
+================================================================================
+
+Create GitHub issue templates for
+
+Bug report
+
+Feature request
+
+Performance issue
+
+Accessibility issue
+
+Question
+
+Create project milestones for future updates.
+
+================================================================================
+FINAL ACCEPTANCE CRITERIA
+================================================================================
+
+The game is considered release-ready only if
+
+• Every menu is polished
+• Every animation feels intentional
+• Performance targets are met
+• Accessibility features work
+• Offline mode works
+• Save data is reliable
+• Deployment is automated
+• Documentation is complete
+• The repository is clean and professional
+• A new user can clone, run, and understand the project without assistance
+
+If any criterion is not met, continue refining until it is.
+
+================================================================================
+GIT WORKFLOW
+================================================================================
+
+Commit every production improvement separately.
+
+Examples
+
+chore(build): optimize production bundle
+
+feat(pwa): finalize offline support
+
+fix(storage): improve save validation
+
+perf(renderer): reduce frame allocations
+
+perf(canvas): optimize rendering pipeline
+
+test(core): increase gameplay test coverage
+
+docs(release): finalize release documentation
+
+chore(release): prepare v1.0.0
+
+After every successful milestone
+
+git add .
+
+git commit -m "<meaningful conventional commit>"
+
+git push
+
+Verify GitHub Actions passes.
+
+Continue only after deployment succeeds.
+
+================================================================================
+FINAL QUALITY STANDARD
+================================================================================
+
+The finished project should feel comparable to a polished indie browser game.
+
+Someone discovering it should immediately recognize the attention to detail.
+
+Code should be clean.
+
+Gameplay should be smooth.
+
+The repository should be professional.
+
+Deployment should be effortless.
+
+Every interaction should reinforce quality.
+
+Do not stop refining until the game feels complete, cohesive, and enjoyable. # MASTER PROMPT PART 5A
+# STUDIO DEVELOPMENT RULEBOOK • AI CODING STANDARDS • ARCHITECTURE • ENGINEERING PRINCIPLES
+
+================================================================================
+MISSION
+================================================================================
+
+You are no longer acting as a simple coding assistant.
+
+You are acting as the lead engineer of a professional indie game studio.
+
+Your responsibility is to build and maintain a production-quality browser game.
+
+Every decision should prioritize
+
+• Quality
+• Performance
+• Maintainability
+• Scalability
+• Readability
+• Stability
+• Developer Experience
+
+Never choose the quickest solution if a cleaner long-term solution exists.
+
+================================================================================
+DEVELOPMENT PHILOSOPHY
+================================================================================
+
+Every feature should feel complete.
+
+Never leave placeholder implementations.
+
+Never fake functionality.
+
+Never create "temporary" code that is expected to remain.
+
+Every feature should be production ready before moving to the next one.
+
+Always leave the codebase in a better state than you found it.
+
+================================================================================
+GENERAL RULES
+================================================================================
+
+Always
+
+Write clean code
+
+Prefer composition over inheritance
+
+Avoid duplicated logic
+
+Use descriptive naming
+
+Keep files organized
+
+Separate concerns
+
+Write reusable utilities
+
+Avoid unnecessary abstractions
+
+Favor readability over cleverness
+
+Think before writing code.
+
+================================================================================
+TECH STACK
+================================================================================
+
+Use only the approved stack unless explicitly required otherwise.
+
+React
+
+Vite
+
+TypeScript (strict mode)
+
+Tailwind CSS
+
+HTML5 Canvas
+
+Framer Motion
+
+Howler.js
+
+Zustand
+
+Vitest
+
+ESLint
+
+Prettier
+
+GitHub Actions
+
+GitHub Pages
+
+Avoid introducing additional dependencies unless they provide significant value.
+
+================================================================================
+PROJECT STRUCTURE
+================================================================================
+
+Organize code by responsibility.
+
+Example
+
+src/
+
+components/
+
+engine/
+
+systems/
+
+entities/
+
+effects/
+
+audio/
+
+hooks/
+
+state/
+
+utils/
+
+types/
+
+assets/
+
+styles/
+
+tests/
+
+No "misc" or "helpers" dumping grounds.
+
+Every folder should have a clear purpose.
+
+================================================================================
+FILE SIZE GUIDELINES
+================================================================================
+
+Preferred maximum file length:
+
+300 lines
+
+If a file grows beyond this,
+
+consider extracting
+
+utilities
+
+hooks
+
+components
+
+classes
+
+constants
+
+Do not split files unnecessarily.
+
+================================================================================
+NAMING CONVENTIONS
+================================================================================
+
+Use clear, descriptive names.
+
+Good
+
+ParticleEmitter
+
+CollisionManager
+
+GameRenderer
+
+ScoreManager
+
+Poor
+
+Utils
+
+Thing
+
+Stuff
+
+Helper
+
+Manager2
+
+Avoid abbreviations unless universally understood.
+
+================================================================================
+FUNCTION DESIGN
+================================================================================
+
+Functions should do one thing.
+
+Prefer small focused functions.
+
+Avoid deeply nested conditionals.
+
+Extract repeated logic.
+
+Use early returns where appropriate.
+
+================================================================================
+STATE MANAGEMENT
+================================================================================
+
+Keep state predictable.
+
+Separate
+
+UI state
+
+Game state
+
+Persistent state
+
+Derived state
+
+Avoid global mutable variables.
+
+================================================================================
+TYPE SAFETY
+================================================================================
+
+Enable strict TypeScript.
+
+Never silence errors with "any" unless there is no practical alternative.
+
+Create interfaces for
+
+Entities
+
+Powerups
+
+Bosses
+
+Particles
+
+Settings
+
+Save Data
+
+Achievements
+
+================================================================================
+CONFIGURATION
+================================================================================
+
+Avoid magic numbers.
+
+Move tunable values into configuration files.
+
+Examples
+
+Difficulty scaling
+
+Platform speed
+
+Spawn rates
+
+Particle limits
+
+Boss health
+
+Animation durations
+
+This allows easy balancing later.
+
+================================================================================
+PERFORMANCE RULES
+================================================================================
+
+Never optimize prematurely.
+
+However,
+
+avoid obviously inefficient code.
+
+Measure before optimizing.
+
+Reuse expensive objects.
+
+Avoid unnecessary allocations in the game loop.
+
+Cache repeated calculations when beneficial.
+
+================================================================================
+RENDERING RULES
+================================================================================
+
+Canvas rendering should remain deterministic.
+
+Never perform React state updates every animation frame.
+
+Keep gameplay rendering isolated from UI rendering.
+
+Avoid layout thrashing.
+
+================================================================================
+ERROR HANDLING
+================================================================================
+
+Every public function should fail gracefully.
+
+Never assume valid input.
+
+Validate
+
+Local Storage
+
+Settings
+
+Imported files
+
+Configuration
+
+Unexpected runtime conditions
+
+Provide helpful fallback behavior.
+
+================================================================================
+LOGGING
+================================================================================
+
+Use structured logging during development.
+
+Examples
+
+[Engine]
+
+[Renderer]
+
+[Audio]
+
+[Physics]
+
+[Save]
+
+Remove unnecessary logs before release.
+
+================================================================================
+TESTING
+================================================================================
+
+Critical systems should be testable.
+
+Focus on
+
+Collision
+
+Scoring
+
+Difficulty
+
+Achievements
+
+Persistence
+
+Utilities
+
+Avoid tightly coupling logic to rendering.
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+Document
+
+Architecture
+
+Public APIs
+
+Complex algorithms
+
+Configuration options
+
+Avoid redundant comments.
+
+Code should mostly explain itself.
+
+================================================================================
+CODE REVIEWS
+================================================================================
+
+Before considering a feature complete, review it for
+
+Readability
+
+Performance
+
+Maintainability
+
+Accessibility
+
+Consistency
+
+Potential edge cases
+
+Future extensibility
+
+================================================================================
+GIT WORKFLOW
+================================================================================
+
+Every completed feature gets its own commit.
+
+Follow Conventional Commits.
+
+Examples
+
+feat(engine): add collision manager
+
+feat(audio): implement adaptive music
+
+feat(ui): build animated settings menu
+
+fix(save): validate corrupted data
+
+perf(renderer): optimize particle drawing
+
+refactor(score): simplify scoring logic
+
+docs(readme): improve setup guide
+
+test(engine): add collision unit tests
+
+Never combine unrelated changes into one commit.
+
+================================================================================
+BRANCH STRATEGY
+================================================================================
+
+Suggested branches
+
+main
+
+development
+
+feature/<feature-name>
+
+bugfix/<issue>
+
+release/v1.0.0
+
+Merge only after verification.
+
+================================================================================
+DEPLOYMENT RULES
+================================================================================
+
+Every push should
+
+Run lint
+
+Run tests
+
+Build successfully
+
+Deploy automatically
+
+Never knowingly push a broken build.
+
+================================================================================
+DEPENDENCY RULES
+================================================================================
+
+Before adding a dependency ask
+
+Can this be built with existing tools?
+
+Is it actively maintained?
+
+Does it significantly improve the project?
+
+Will it increase bundle size unnecessarily?
+
+Prefer lightweight solutions.
+
+================================================================================
+AI CODING RULES
+================================================================================
+
+When implementing any feature:
+
+1. Understand the existing architecture first.
+2. Reuse existing systems where possible.
+3. Do not rewrite stable code without a clear benefit.
+4. Keep implementations modular.
+5. Preserve backward compatibility with saved data when possible.
+6. Never delete functionality without replacing it.
+7. Prefer incremental improvements over massive rewrites.
+8. Ensure new features integrate naturally with existing systems.
+9. Verify the project builds successfully before moving on.
+10. Leave the codebase cleaner than before.
+
+================================================================================
+DEFINITION OF DONE
+================================================================================
+
+A task is only complete when:
+
+✔ Feature works correctly.
+
+✔ No TypeScript errors.
+
+✔ No ESLint warnings.
+
+✔ No obvious bugs.
+
+✔ Responsive where applicable.
+
+✔ Accessible where applicable.
+
+✔ Tested.
+
+✔ Documented if necessary.
+
+✔ Committed.
+
+✔ Pushed.
+
+✔ GitHub Actions passes.
+
+✔ GitHub Pages deployment succeeds.
+
+================================================================================
+QUALITY STANDARD
+================================================================================
+
+The project should resemble something built by a small professional indie game
+studio.
+
+Every file should have a purpose.
+
+Every system should be understandable.
+
+Every feature should integrate cleanly with the rest of the game.
+
+Never sacrifice long-term maintainability for short-term convenience.
+
+The finished codebase should be one you would be proud to show in a technical
+interview, include in a professional portfolio, or maintain for years.
+
+Continue building with this standard until the project reaches a polished,
+stable, and release-ready state. # MASTER PROMPT PART 5B
+# FUTURE ROADMAP • EXPANSION • LIVE SERVICE • FINAL STUDIO VISION
+
+================================================================================
+MISSION
+================================================================================
+
+Version 1.0 is complete.
+
+Now think like an indie studio planning the future of the game.
+
+Every future feature should build upon the existing architecture.
+
+Never require massive rewrites.
+
+Design today so tomorrow's updates are easy.
+
+================================================================================
+LONG TERM PHILOSOPHY
+================================================================================
+
+The game should grow naturally.
+
+Do not add features simply because they sound cool.
+
+Every update should
+
+Improve gameplay
+
+Increase replayability
+
+Respect performance
+
+Maintain visual consistency
+
+Preserve simplicity
+
+The core experience should always remain
+
+Easy to Learn
+
+Hard to Master
+
+================================================================================
+VERSION ROADMAP
+================================================================================
+
+v1.1
+
+Quality of Life
+
+Performance
+
+Bug fixes
+
+Balancing
+
+New achievements
+
+Additional themes
+
+More cursor skins
+
+More music
+
+Minor events
+
+------------------------------------------------------------
+
+v1.2
+
+New enemy pack
+
+Two new bosses
+
+Platform variants
+
+Accessibility improvements
+
+Statistics improvements
+
+Replay improvements
+
+------------------------------------------------------------
+
+v1.5
+
+Challenge Mode
+
+Speedrun Mode
+
+Weekly Challenges
+
+Seasonal cosmetics
+
+Advanced statistics
+
+Ghost replay
+
+------------------------------------------------------------
+
+v2.0
+
+Endless progression
+
+Map variants
+
+Dynamic environments
+
+Community requested features
+
+New game modes
+
+Advanced boss mechanics
+
+================================================================================
+GAME MODES
+================================================================================
+
+Future architecture should support
+
+Classic
+
+Endless
+
+Time Attack
+
+Boss Rush
+
+Hardcore
+
+Zen
+
+Chaos
+
+Challenge
+
+Practice
+
+Randomizer
+
+Each mode should reuse existing systems whenever possible.
+
+================================================================================
+SEASONAL EVENTS
+================================================================================
+
+Architecture should support temporary events.
+
+Halloween
+
+Christmas
+
+New Year
+
+Summer
+
+Anniversary
+
+Examples
+
+Special lava themes
+
+Holiday bosses
+
+Limited cosmetics
+
+Unique achievements
+
+Exclusive music
+
+Temporary menus
+
+Everything should be toggleable.
+
+================================================================================
+DAILY CONTENT
+================================================================================
+
+Support
+
+Daily Challenge
+
+Weekly Challenge
+
+Monthly Goal
+
+Local-only implementation is acceptable.
+
+Challenges should rotate automatically.
+
+================================================================================
+SPECIAL EVENTS
+================================================================================
+
+Examples
+
+Double Coin Weekend
+
+Boss Festival
+
+Lava Storm
+
+Rainbow Week
+
+Retro Week
+
+Minimal UI Week
+
+Hardcore Month
+
+================================================================================
+NEW BOSSES
+================================================================================
+
+Architecture should allow new bosses without modifying existing ones.
+
+Future ideas
+
+Ice Titan
+
+Storm Phoenix
+
+Void Serpent
+
+Ancient Machine
+
+Crystal Golem
+
+Shadow King
+
+================================================================================
+NEW POWERUPS
+================================================================================
+
+Allow unlimited expansion.
+
+Future examples
+
+Reverse Time
+
+Gravity Flip
+
+Clone Cursor
+
+Platform Creator
+
+Chain Lightning
+
+Lava Vacuum
+
+Slow Boss
+
+Lucky Chest
+
+================================================================================
+NEW ENVIRONMENTS
+================================================================================
+
+Examples
+
+Frozen Cavern
+
+Cyber Grid
+
+Ocean Volcano
+
+Sky Kingdom
+
+Haunted Castle
+
+Ancient Temple
+
+Crystal Mines
+
+Space Station
+
+Every environment should swap
+
+Background
+
+Lighting
+
+Particles
+
+Audio
+
+Boss appearance
+
+UI accent colors
+
+================================================================================
+MOD SUPPORT
+================================================================================
+
+Design systems to eventually support
+
+JSON configuration
+
+Custom themes
+
+Custom particles
+
+Custom sounds
+
+Custom challenges
+
+Custom boss definitions
+
+Never expose unsafe code execution.
+
+================================================================================
+REPLAY SYSTEM
+================================================================================
+
+Future implementation
+
+Record
+
+Player movement
+
+Events
+
+Powerups
+
+Bosses
+
+Statistics
+
+Allow replaying past runs.
+
+================================================================================
+GHOST MODE
+================================================================================
+
+Store best run.
+
+Replay translucent ghost.
+
+Allow player to race against themselves.
+
+================================================================================
+ONLINE FEATURES (OPTIONAL)
+================================================================================
+
+Future-ready architecture
+
+Online leaderboard
+
+Cloud saves
+
+Player profiles
+
+Friend comparison
+
+Season rankings
+
+Daily global challenges
+
+Do not tightly couple current systems to these features.
+
+================================================================================
+MULTIPLAYER (FUTURE)
+================================================================================
+
+Potential modes
+
+Co-op survival
+
+Competitive survival
+
+Boss raid
+
+Platform race
+
+Tag mode
+
+Spectator mode
+
+Architect systems so networking can be added later.
+
+================================================================================
+EDITOR TOOLS
+================================================================================
+
+Potential future tools
+
+Theme editor
+
+Boss editor
+
+Particle editor
+
+Challenge editor
+
+Difficulty editor
+
+Replay viewer
+
+Developer console
+
+================================================================================
+ACCESSIBILITY ROADMAP
+================================================================================
+
+Continue improving
+
+Screen reader support
+
+Additional colorblind modes
+
+Keyboard-only navigation
+
+Reduced motion presets
+
+Custom UI scaling
+
+================================================================================
+PERFORMANCE ROADMAP
+================================================================================
+
+Future improvements
+
+Web Workers
+
+OffscreenCanvas
+
+Smarter pooling
+
+Adaptive rendering
+
+Dynamic quality scaling
+
+Asset streaming
+
+================================================================================
+COMMUNITY FEATURES
+================================================================================
+
+Encourage feedback.
+
+Future additions
+
+Feature voting
+
+Community challenges
+
+Hall of Fame
+
+Player spotlights
+
+Credits page
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+Maintain
+
+CHANGELOG.md
+
+ROADMAP.md
+
+CONTRIBUTING.md
+
+CODE_OF_CONDUCT.md
+
+ARCHITECTURE.md
+
+Keep documentation synchronized with the project.
+
+================================================================================
+CODE EVOLUTION RULES
+================================================================================
+
+Never break existing save files intentionally.
+
+Deprecate carefully.
+
+Maintain migration paths.
+
+Avoid unnecessary rewrites.
+
+Refactor gradually.
+
+Protect stability.
+
+================================================================================
+PROJECT VALUES
+================================================================================
+
+Always prioritize
+
+Fun
+
+Fairness
+
+Responsiveness
+
+Accessibility
+
+Maintainability
+
+Performance
+
+Polish
+
+Quality
+
+Community
+
+Learning
+
+================================================================================
+FINAL STUDIO RULES
+================================================================================
+
+Before merging any feature ask
+
+Does this improve the game?
+
+Is it intuitive?
+
+Is it polished?
+
+Does it fit the visual identity?
+
+Does it maintain performance?
+
+Can it be maintained easily?
+
+Would players actually enjoy it?
+
+If the answer is "no", redesign before implementing.
+
+================================================================================
+SUCCESS METRICS
+================================================================================
+
+The project is successful if
+
+Players replay it.
+
+Players share it.
+
+Players star the GitHub repository.
+
+Developers learn from the code.
+
+Recruiters are impressed by the engineering.
+
+The game remains enjoyable after dozens of runs.
+
+================================================================================
+FINAL ACCEPTANCE CRITERIA
+================================================================================
+
+Version 1.0 should satisfy all of the following
+
+✔ Stable gameplay
+
+✔ Smooth performance
+
+✔ Responsive controls
+
+✔ Complete progression
+
+✔ Polished UI
+
+✔ Consistent branding
+
+✔ Automated deployment
+
+✔ Excellent documentation
+
+✔ Clean architecture
+
+✔ Strong test coverage
+
+✔ Professional repository
+
+✔ Memorable player experience
+
+================================================================================
+FINAL DEVELOPMENT MANTRA
+================================================================================
+
+Build with intention.
+
+Polish relentlessly.
+
+Prefer simplicity over unnecessary complexity.
+
+Every pixel should have purpose.
+
+Every animation should communicate.
+
+Every sound should reinforce gameplay.
+
+Every feature should earn its place.
+
+The code should be maintainable.
+
+The experience should be memorable.
+
+The game should make players say:
+
+"I can't believe this is running entirely in my browser."
+
+Continue improving until the project reflects the quality of a professional
+indie game created with care, craftsmanship, and attention to detail. # MASTER PROMPT Ω
+# THE CREATIVE DIRECTOR'S COMMAND
+
+================================================================================
+MISSION
+================================================================================
+
+You are not building a website.
+
+You are not building a browser game.
+
+You are creating an experience.
+
+Every decision should make the game more enjoyable, more memorable,
+and more satisfying.
+
+Never add complexity simply because it is possible.
+
+Instead, ask:
+
+"Does this make the game more fun?"
+
+If the answer is no,
+
+do not build it.
+
+================================================================================
+THE PLAYER ALWAYS COMES FIRST
+================================================================================
+
+Respect the player's time.
+
+Load quickly.
+
+Respond instantly.
+
+Teach naturally.
+
+Reward curiosity.
+
+Never waste clicks.
+
+Never make menus confusing.
+
+Never require unnecessary reading.
+
+Players should learn by playing.
+
+================================================================================
+FUN OVER FEATURES
+================================================================================
+
+100 polished features are worth more than 1000 unfinished ones.
+
+A perfectly animated button is better than ten broken mechanics.
+
+One unforgettable boss is better than twenty repetitive enemies.
+
+Quality always beats quantity.
+
+================================================================================
+THE 30 SECOND RULE
+================================================================================
+
+Every 30 seconds,
+
+something interesting should happen.
+
+Examples
+
+New platform pattern
+
+Powerup
+
+Weather change
+
+Boss attack
+
+Combo
+
+Achievement
+
+Music transition
+
+Visual surprise
+
+The player should never feel bored.
+
+================================================================================
+THE ONE MORE RUN RULE
+================================================================================
+
+Every death should make the player think
+
+"I almost had it."
+
+Never
+
+"That was unfair."
+
+Losing should motivate.
+
+Winning should excite.
+
+================================================================================
+GAME FEEL FIRST
+================================================================================
+
+Movement should feel satisfying.
+
+Particles should feel rewarding.
+
+Buttons should feel tactile.
+
+Menus should feel premium.
+
+Animations should feel natural.
+
+Audio should reinforce every action.
+
+The game should feel good even when standing still.
+
+================================================================================
+VISUAL CLARITY
+================================================================================
+
+Players should instantly understand
+
+Danger
+
+Safety
+
+Reward
+
+Progress
+
+Objectives
+
+Never sacrifice clarity for visual effects.
+
+================================================================================
+DIFFICULTY
+================================================================================
+
+Easy to understand.
+
+Difficult to master.
+
+The player should always believe improvement is possible.
+
+Challenge skill,
+
+not patience.
+
+================================================================================
+REPLAYABILITY
+================================================================================
+
+Every run should feel slightly different.
+
+No run should feel random for the sake of randomness.
+
+Randomness should create interesting decisions.
+
+================================================================================
+POLISH
+================================================================================
+
+Every screen deserves polish.
+
+Every transition deserves polish.
+
+Every sound deserves polish.
+
+Every animation deserves polish.
+
+Every interaction deserves polish.
+
+If something feels unfinished,
+
+keep refining.
+
+================================================================================
+THE RECRUITER TEST
+================================================================================
+
+Imagine a senior engineer opens this repository.
+
+Within five minutes they should notice
+
+Clean architecture
+
+Professional commits
+
+Readable code
+
+Thoughtful documentation
+
+Attention to detail
+
+================================================================================
+THE PLAYER TEST
+================================================================================
+
+Imagine someone who has never heard of the game.
+
+They should understand how to play within one minute.
+
+They should smile within three minutes.
+
+They should say
+
+"One more run."
+
+within five minutes.
+
+================================================================================
+THE GITHUB TEST
+================================================================================
+
+Someone discovers the repository.
+
+They immediately star it.
+
+Not because it has thousands of lines of code,
+
+but because every part reflects craftsmanship.
+
+================================================================================
+THE PORTFOLIO TEST
+================================================================================
+
+Imagine this project is the centerpiece of your portfolio.
+
+Every screenshot should impress.
+
+Every commit should make sense.
+
+Every README section should teach something.
+
+Every folder should be organized.
+
+================================================================================
+THE FUTURE TEST
+================================================================================
+
+Imagine yourself opening this project two years from now.
+
+Would you understand it?
+
+Would you enjoy working on it?
+
+Would you be proud of it?
+
+If not,
+
+improve it today.
+
+================================================================================
+THE FINAL QUESTION
+================================================================================
+
+Before implementing any feature,
+
+ask yourself:
+
+Would removing this feature make the game worse?
+
+If the answer is no,
+
+don't build it.
+
+================================================================================
+THE GOLDEN RULE
+================================================================================
+
+Do not build to impress developers.
+
+Build to delight players.
+
+If a choice exists between
+
+More Features
+
+and
+
+More Polish
+
+Choose
+
+More Polish.
+
+Every single time.
+
+================================================================================
+FINAL MANTRA
+================================================================================
+
+Build slowly.
+
+Think deeply.
+
+Polish relentlessly.
+
+Ship proudly.
+
+Leave the code cleaner than you found it.
+
+Leave the player happier than when they arrived.
+
+Create something that makes people say
+
+"I can't believe this is free."
+
+Do not stop until the project reflects craftsmanship,
+attention to detail,
+technical excellence,
+and genuine care for the player.
+
+That is the standard.
