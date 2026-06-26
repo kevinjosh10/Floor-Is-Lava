@@ -1,5 +1,6 @@
 import { Time } from './Time';
 import { Input } from './Input';
+import { Cursor } from '../entities/Cursor';
 
 export class GameLoop {
   private requestRef: number = 0;
@@ -7,6 +8,7 @@ export class GameLoop {
   
   public time: Time;
   public input: Input;
+  public cursor: Cursor;
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
 
@@ -18,6 +20,7 @@ export class GameLoop {
     
     this.time = new Time();
     this.input = new Input();
+    this.cursor = new Cursor();
   }
 
   public start() {
@@ -45,10 +48,13 @@ export class GameLoop {
     // 2. Update Input
     this.input.update(this.time.deltaTime);
 
-    // 3. Render
+    // 3. Update Entities
+    this.cursor.update(this.input, this.time);
+
+    // 4. Render
     this.render();
 
-    // 4. Next Frame
+    // 5. Next Frame
     this.requestRef = requestAnimationFrame(this.loop);
   }
 
@@ -59,18 +65,8 @@ export class GameLoop {
     this.ctx.fillStyle = '#121212'; // charcoal-900
     this.ctx.fillRect(0, 0, width, height);
 
-    // Temp: Render custom cursor core
-    this.ctx.fillStyle = '#ff2a00';
-    this.ctx.beginPath();
-    this.ctx.arc(this.input.x, this.input.y, 8, 0, Math.PI * 2);
-    this.ctx.fill();
-    
-    // Temp: Draw cursor trail effect
-    this.ctx.strokeStyle = 'rgba(255, 102, 0, 0.5)';
-    this.ctx.lineWidth = 4;
-    this.ctx.beginPath();
-    this.ctx.moveTo(this.input.previousX, this.input.previousY);
-    this.ctx.lineTo(this.input.x, this.input.y);
-    this.ctx.stroke();
+    // Render Entities
+    this.cursor.render(this.ctx, this.input);
   }
 }
+
