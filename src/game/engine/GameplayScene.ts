@@ -102,7 +102,7 @@ export class GameplayScene extends Scene {
     this.director.gameOver();
   }
 
-  public render(ctx: CanvasRenderingContext2D, input: Input, time: Time): void {
+  public render(ctx: CanvasRenderingContext2D, _input: Input, time: Time): void {
     this.lava.render(ctx, this.width, this.height, time);
     
     for (const p of this.platforms) {

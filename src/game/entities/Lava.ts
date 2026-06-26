@@ -59,7 +59,7 @@ export class Lava {
   }
   
   // Check if a point is in lava
-  public contains(x: number, y: number): boolean {
+  public contains(_x: number, y: number): boolean {
     return y > this.yPosition;
   }
 }

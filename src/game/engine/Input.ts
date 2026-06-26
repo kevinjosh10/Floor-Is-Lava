@@ -10,19 +10,15 @@ export class Input {
   public totalDistance: number = 0;
   
   private isTracking: boolean = false;
-  private canvas: HTMLCanvasElement | null = null;
 
   public attach(canvas: HTMLCanvasElement) {
-    this.canvas = canvas;
     this.isTracking = true;
-    
     window.addEventListener('mousemove', this.handleMouseMove);
   }
 
   public detach() {
     this.isTracking = false;
     window.removeEventListener('mousemove', this.handleMouseMove);
-    this.canvas = null;
   }
 
   private handleMouseMove = (e: MouseEvent) => {

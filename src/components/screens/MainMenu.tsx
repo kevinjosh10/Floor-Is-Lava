@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Settings, Trophy, Award, Palette, Info, LogOut } from 'lucide-react';
+import { Play, Settings, Trophy, Award, Palette, Info } from 'lucide-react';
 import { useAppStore } from '../../store/useAppStore';
 
 const MenuButton = ({ icon: Icon, label, onClick, delay }: { icon: any, label: string, onClick: () => void, delay: number }) => (
